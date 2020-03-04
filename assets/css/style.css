@@ -5,7 +5,7 @@ html {
 }
 
 body {
-    font-family: 'helvetica', 'roboto',  sans-serif;
+    font-family: 'Indie Flower', 'roboto',  cursive;
     text-align: center;
 
 }
@@ -25,7 +25,20 @@ overflow: hidden;
 
 .navbar{
     padding: 0;
+    font-weight: 700;
 }
+
+.navbar-light .navbar-nav .nav-link{
+    color: #000;
+    border: 2px solid transparent;
+}
+
+.navbar-light .navbar-nav .nav-link:hover{
+    color: #000;
+    border: 2px solid #e6a723;
+    
+}
+
 
 .logo {
     max-height: 70px ;
