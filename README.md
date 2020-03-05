@@ -1,5 +1,9 @@
 # CI-MilestoneProjectTwo
 
+## GO MCR Overview
+This site has been created to be a guide for potential visitors to Manchester, or local residents, to find a selection of activities to do, places to eat, or accomodation within the city.
+
+This site has been designed to be easy to navigate and for users to find something that takes their fancy.
 
 ## Live site
 
