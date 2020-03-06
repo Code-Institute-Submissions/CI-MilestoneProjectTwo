@@ -5,7 +5,7 @@ html {
 }
 
 body {
-    font-family: 'Indie Flower', 'roboto',  cursive;
+    font-family: 'Indie Flower', cursive;
     text-align: center;
 
 }
@@ -13,6 +13,12 @@ body {
 .container-fluid{
 overflow: hidden;
 }
+
+#maincontainer{
+height: auto;
+width: auto;
+}
+
 
 /* Nav Bar */
 
