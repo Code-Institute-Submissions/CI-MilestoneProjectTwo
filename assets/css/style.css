@@ -63,8 +63,8 @@ overflow: hidden;
     position: absolute;
     top: 0;
     left: 0;
-    height: 100vh;
-    width: 100vw;
+    height: 100%;
+    width: 100%;
     background-color: rgba(0, 0, 0, 0.5);
 }
 
@@ -82,10 +82,18 @@ overflow: hidden;
 
 .features{
     padding-top: 10vh;
+    font-size: 2em;
+    text-align: center;
+    align-items: center;
 }
 
-.activityfeature, .fooddrinkfeature, .accomodationfeature{
-    padding-top: 3vh;
+.feature{
+    border: 2px solid #e6a723;
+    margin: 0.5em 1.5em 0.5em 1em;
+    justify-content: center;
+    align-items: center;
+	background-color: rgba(0, 0, 0, 0.6);;
+    cursor: pointer;
 }
 
 /* footer */
@@ -95,23 +103,20 @@ overflow: hidden;
     bottom: 0;
     width: 100%;
     height: 4em;
-    overflow: hidden;
+    background-color: rgba(230, 167, 35, 0.8)
 }
 
 .socialicon {
-    font-size: 1.5em;
-    margin-left: 1.5em;
-    padding-top: 5px;
-    height: 40px;
-    width: 40px;
-    border-radius: 50%;
-    background-color: #e6a723;
+    font-size: 2.5em;
+    margin-left: 25px;
+    margin-right: 25px;
+    padding-top: 0.25em;
     text-align: center;
 }
 
 .socialicon a i {
-    color: #000;   
+    color: #fff; 
 }
 
 .socialicon a i:hover{
-    color: rgba(0, 0, 0, 0.8);
+    color: #000
