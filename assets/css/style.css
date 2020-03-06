@@ -14,11 +14,6 @@ body {
 overflow: hidden;
 }
 
-#maincontainer{
-height: auto;
-width: auto;
-}
-
 
 /* Nav Bar */
 
@@ -45,7 +40,6 @@ width: auto;
     
 }
 
-
 .logo {
     max-height: 70px ;
     background-size: contain;
@@ -61,6 +55,7 @@ width: auto;
     height: 100%;
     width: 100%;
     background-size: cover;
+    display: block;
     z-index: -1;
     color: #fff;
 }
@@ -95,7 +90,7 @@ width: auto;
 
 .feature{
     border: 2px solid #e6a723;
-    margin: 0.5em 1.5em 0.5em 1em;
+    margin: 0.5em 1em 0em 1em;
     justify-content: center;
     align-items: center;
 	background-color: rgba(0, 0, 0, 0.6);;
