@@ -134,6 +134,13 @@ body {
     transition: .25s ease-in-out;
 }
 
+/* Activities, Food & Drink, Accomodation */
+
+.locationimage {
+    height: 275px;
+    width: 350px;
+    object-fit: cover;
+}
 
 /* Activities */
 
