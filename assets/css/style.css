@@ -7,7 +7,15 @@ html {
 body {
     font-family: 'Indie Flower', cursive;
     text-align: center;
+    padding: 0;
+    margin: 0;
+}
 
+/* Landing Container */
+
+.landingcontainer{
+    height: 100vh;
+    width: 100vw;
 }
 
 /* Nav Bar */
@@ -16,12 +24,13 @@ body {
     align-content: center;
     top: 0;
     left: 0;
-    background-color: #fff
 }
 
 .navbar{
     padding: 0;
     font-weight: 700;
+    background-color: #fff;
+    z-index: 2;
 }
 
 .navbar-light .navbar-nav .nav-link{
@@ -33,7 +42,6 @@ body {
     color: #000;
     border: 2px solid #e6a723;
     transition: .25s ease-in-out;
-    
 }
 
 .logo {
@@ -52,7 +60,7 @@ body {
     width: 100vw;
     background-size: cover;
     display: block;
-    z-index: -1;
+    z-index: 1;
     color: #fff;
 }
 
@@ -106,6 +114,7 @@ body {
     width: 100%;
     height: 4em;
     background-color: rgba(230, 167, 35, 0.8);
+    z-index: 1;
 }
 
 .socialicon {
@@ -126,6 +135,8 @@ body {
 }
 
 
-.activitiescontainer{
-    position: relative;
-}
+/* Activities */
+
+/* Food & Drink */
+
+/* Accomodation */
