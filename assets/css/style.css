@@ -82,7 +82,7 @@ body {
     font-size: 3em;
 }
 
-.features{
+.allfeatures{
     padding-top: 10vh;
     font-size: 2em;
     text-align: center;
@@ -133,6 +133,13 @@ body {
 
 /* Activities, Food & Drink, Accomodation */
 
+.featureheading{
+    font-size: 3em;
+    font-weight: 700;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
 .location {
     display: flex;
     justify-content: center;
@@ -152,9 +159,9 @@ body {
     position: absolute;
     color: #fff;
     font-size: 1.25em;
-    font-weight: 500;
+    font-weight: 600;
     width: 300px;
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(230, 167, 35, 0.8);
 }
 
 
