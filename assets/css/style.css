@@ -1,14 +1,14 @@
 /* General */
 
-html {
-  scroll-behavior: smooth;
-}
-
 body {
     font-family: 'Indie Flower', cursive;
     text-align: center;
     padding: 0;
     margin: 0;
+}
+
+.hide {
+    display: none;
 }
 
 /* Landing Container */
@@ -22,15 +22,19 @@ body {
 
 #navcontainer {
     align-content: center;
-    top: 0;
-    left: 0;
+    width: 100vw;
+    position: fixed;
+    top:0;
+    left:0;
+    border-bottom: 1px solid #e6a723;
+    z-index: 2;
 }
 
 .navbar{
     padding: 0;
     font-weight: 700;
     background-color: #fff;
-    z-index: 2;
+    
 }
 
 .navbar-light .navbar-nav .nav-link{
@@ -50,7 +54,7 @@ body {
 }
 /* Home */
 
-#home {
+#landing {
     position: absolute;
     top: 0;
     left: 0;
@@ -136,7 +140,7 @@ body {
 .featureheading{
     font-size: 3em;
     font-weight: 700;
-    margin-top: 50px;
+    padding-top: 100px;
     margin-bottom: 20px;
 }
 

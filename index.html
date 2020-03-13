@@ -13,11 +13,7 @@
 </head>
 
 <body>
-
-<!-- Landing page-->
-  
- <div class="container-fluid p-0 landingcontainer">
-
+ 
 	<!--navbar -->
         <div id="navcontainer">
             <nav class="navbar navbar-default navbar-light navbar-expand-sm">
@@ -30,18 +26,20 @@
                             </button>
                 <div class="collapse navbar-collapse" id="navbarcollapse">
                     <ul class="navbar-nav ml-auto">
-                        <li class="nav-item mr-3"><a class="nav-link" href="#home">Home</a></li>
-                        <li class="nav-item mr-3"><a class="nav-link" href="#activities">Activities</a></li>
-                        <li class="nav-item mr-3"><a class="nav-link" href="#fooddrink">Food & Drink</a></li>
-                        <li class="nav-item mr-3"><a class="nav-link" href="#accomodation">Accomodation</a></li>
+                        <li class="nav-item mr-3"><a id="navhome" class="nav-link" href="#home">Home</a></li>
+                        <li class="nav-item mr-3"><a id="navactivities" class="nav-link" href="#activities">Activities</a></li>
+                        <li class="nav-item mr-3"><a id="navfooddrink"class="nav-link" href="#fooddrink">Food & Drink</a></li>
+                        <li class="nav-item mr-3"><a id="navaccomodation" class="nav-link" href="#accomodation">Accomodation</a></li>
                     </ul>
                 </div>
             </nav>
         </div>
 	<!--/navbar -->
 
+<!--/Landing page -->
+<div id="home" class="container-fluid p-0 landingcontainer">
 	<!--Home-->
-        <section id="home">
+        <section id="landing">
             <div class="opaque-overlay">
                 <div class="row no-gutters justify-content-center">
                     <div class="welcomecontainer">
@@ -100,12 +98,12 @@
         </footer>
     <!--/Footer-->
 
-    </div>
+</div>
 <!--/Landing page -->
 
     <!--Activities-->
 
-    <section id="activities" class="activitiescontainer">
+    <section id="activities" class="activitiescontainer hide">
         <h2 class="featureheading">Activities</h2>
         <div class="row m-0 justify-content-center">
             <div class="col-12 col-md-6 col-lg-3 location">
@@ -162,7 +160,7 @@
     <!--/Activities-->
 
     <!--Food & Drink-->
-    <section id="fooddrink" class="foodrinkcontainer">
+    <section id="fooddrink" class="foodrinkcontainer hide">
         <h2 class="featureheading">Food & Drink</h2>
         <div class="row m-0 justify-content-center">
             <div class="col-12 col-md-6 col-lg-3 location">
@@ -219,7 +217,7 @@
 
     <!--Accomodation-->
 
-    <section id="accomodation" class="accomodationcontainer">
+    <section id="accomodation" class="accomodationcontainer hide">
         <h2 class="featureheading">Accomodation</h2>
         <div class="row m-0 justify-content-center">
             <div class="col-12 col-md-6 col-lg-3 location">
@@ -277,7 +275,7 @@
 
     <!--Activity, Food & Drink, Accomodation details-->
 
-    <section id="locationdetails"> 
+    <section id="locationdetails" class="hide"> 
     <div class="container-fluid">
         <div class="row justify-content-center">
             <div class="col-12 col-md-3 col-lg-3">
