@@ -2,34 +2,46 @@
 
 $(document).ready(function () {
 
+    // Used to hide sections when a nav item is selected.
+
     $(function () {
         $(".nav-link").click(function() { 
             if ($(this).attr("id") === "navhome") {
                 $("#home").removeClass("hide");
-                $("#activities").addClass("hide");
-                $("#fooddrink").addClass("hide");
-                $("#accomodation").addClass("hide");
-
+                $("#activities, #fooddrink ,#accomodation").addClass("hide");
+            
             } else if ($(this).attr("id") === "navactivities") {
-                $("#home").addClass("hide");
                 $("#activities").removeClass("hide");
-                $("#fooddrink").addClass("hide");
-                $("#accomodation").addClass("hide");
-                $("#footer").addClass("hide");
+                $("#home, #fooddrink, #accomodation").addClass("hide");
+                
 
             } else if ($(this).attr("id") === "navfooddrink") {
-                $("#home").addClass("hide");
-                $("#activities").addClass("hide");
                 $("#fooddrink").removeClass("hide");
-                $("#accomodation").addClass("hide");
-                $("#footer").addClass("hide"); 
+                $("#home, #activities, #accomodation").addClass("hide"); 
 
             } else if ($(this).attr("id") === "navaccomodation") {
-                $("#home").addClass("hide");
-                $("#activities").addClass("hide");
-                $("#fooddrink").addClass("hide");
                 $("#accomodation").removeClass("hide");
-                $("#footer").addClass("hide");
+                $("#home, #activities, #fooddrink ").addClass("hide");
+            }
+        });
+    });
+
+
+    // Used to hide sections when a one of the home 'buttons' is selected.
+
+    $(function () {
+        $(".feature").click(function() { 
+            if ($(this).attr("id") === "homeactivities") {
+                $("#activities").removeClass("hide");
+                $("#home, #fooddrink, #accomodation").addClass("hide");
+                
+            } else if ($(this).attr("id") === "homefooddrink") {
+                $("#fooddrink").removeClass("hide");
+                $("#home, #activities, #accomodation").addClass("hide");
+
+            } else if ($(this).attr("id") === "homeaccomodation") {
+                $("#accomodation").removeClass("hide");
+                $("#home, #activities, #fooddrink").addClass("hide");
             }
         });
     });
