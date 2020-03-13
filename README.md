@@ -38,9 +38,19 @@ The site should also be very intuitive, and have clear navigation based on the v
 
 ### Scope
 
+The scope was to cater for a variety of vistors, and be able to display a range of places to visit. 
+
+The key areas identified that a visitor might be looking for were:
+
+1. Activities / things to do
+2. Places to eat and drink.
+3. Accomodation / places to stay over
 
 ### Structure
 
+Given the strategy to have clear navigation based on the user preference, the landing screen was designed to have 3 clear options (as detailed in the scope) that a user can select to view more detail.
+
+Depending on which option is selected, the site will display a variety of locations that the user can then also select, which will display further information about that location, including a marked map.
 
 ### Skeleton
 
