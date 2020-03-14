@@ -8,20 +8,20 @@ $(document).ready(function () {
         $(".nav-link").click(function () {
             if ($(this).attr("id") === "navhome") {
                 $("#home").removeClass("hide");
-                $("#activities, #fooddrink ,#accomodation").addClass("hide");
+                $("#activities, #fooddrink ,#accomodation, #locationdetails").addClass("hide");
 
             } else if ($(this).attr("id") === "navactivities") {
                 $("#activities").removeClass("hide");
-                $("#home, #fooddrink, #accomodation").addClass("hide");
+                $("#home, #fooddrink, #accomodation, #locationdetails").addClass("hide");
 
 
             } else if ($(this).attr("id") === "navfooddrink") {
                 $("#fooddrink").removeClass("hide");
-                $("#home, #activities, #accomodation").addClass("hide");
+                $("#home, #activities, #accomodation, #locationdetails").addClass("hide");
 
             } else if ($(this).attr("id") === "navaccomodation") {
                 $("#accomodation").removeClass("hide");
-                $("#home, #activities, #fooddrink ").addClass("hide");
+                $("#home, #activities, #fooddrink, #locationdetails").addClass("hide");
             }
         });
     });
@@ -33,15 +33,15 @@ $(document).ready(function () {
         $(".feature").click(function () {
             if ($(this).attr("id") === "homeactivities") {
                 $("#activities").removeClass("hide");
-                $("#home, #fooddrink, #accomodation").addClass("hide");
+                $("#home, #fooddrink, #accomodation, #locationdetails").addClass("hide");
 
             } else if ($(this).attr("id") === "homefooddrink") {
                 $("#fooddrink").removeClass("hide");
-                $("#home, #activities, #accomodation").addClass("hide");
+                $("#home, #activities, #accomodation, #locationdetails").addClass("hide");
 
             } else if ($(this).attr("id") === "homeaccomodation") {
                 $("#accomodation").removeClass("hide");
-                $("#home, #activities, #fooddrink").addClass("hide");
+                $("#home, #activities, #fooddrink, #locationdetails").addClass("hide");
             }
         });
     });
