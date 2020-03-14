@@ -2,22 +2,22 @@
 
 $(document).ready(function () {
 
-    // Used to display and hide sections when a nav item is selected.
+    // Used to display and hide feature sections when a nav item is selected.
 
     $(function () {
-        $(".nav-link").click(function() { 
+        $(".nav-link").click(function () {
             if ($(this).attr("id") === "navhome") {
                 $("#home").removeClass("hide");
                 $("#activities, #fooddrink ,#accomodation").addClass("hide");
-            
+
             } else if ($(this).attr("id") === "navactivities") {
                 $("#activities").removeClass("hide");
                 $("#home, #fooddrink, #accomodation").addClass("hide");
-                
+
 
             } else if ($(this).attr("id") === "navfooddrink") {
                 $("#fooddrink").removeClass("hide");
-                $("#home, #activities, #accomodation").addClass("hide"); 
+                $("#home, #activities, #accomodation").addClass("hide");
 
             } else if ($(this).attr("id") === "navaccomodation") {
                 $("#accomodation").removeClass("hide");
@@ -27,14 +27,14 @@ $(document).ready(function () {
     });
 
 
-    // Used to display and hide sections when a one of the home 'buttons' is selected on the landing screen.
+    // Used to display and hide feature sections when a one of the home 'buttons' is selected on the landing screen.
 
     $(function () {
-        $(".feature").click(function() { 
+        $(".feature").click(function () {
             if ($(this).attr("id") === "homeactivities") {
                 $("#activities").removeClass("hide");
                 $("#home, #fooddrink, #accomodation").addClass("hide");
-                
+
             } else if ($(this).attr("id") === "homefooddrink") {
                 $("#fooddrink").removeClass("hide");
                 $("#home, #activities, #accomodation").addClass("hide");
@@ -45,31 +45,41 @@ $(document).ready(function () {
             }
         });
     });
-    
-})
 
 
-// Used add styling to location divs when hovered over
-$(function () {
-    $(".location").hover(function() {
-        $(this).children('.locationimage').css({'transform' : 'scale(1.2)', 'transition' : 'transform 400ms ease-in-out'});
-        $(this).children('.locationname').css({'transform' : 'scale(1.2)' , 'transition' : 'transform 400ms ease-in-out'});
-    }, function() {
-        $(this).children('.locationimage').css({'transform' : 'scale(1)' , 'transition' : 'transform 400ms ease-in-out'});
-        $(this).children('.locationname').css({'transform' : 'scale(1)' , 'transition' : 'transform 400ms ease-in-out'});
+
+
+    // Used add styling to location divs when hovered over
+    $(function () {
+        $(".location").hover(function () {
+            $(this).children('.locationimage').css({ 'transform': 'scale(1.2)', 'transition': 'transform 400ms ease-in-out' });
+            $(this).children('.locationname').css({ 'transform': 'scale(1.2)', 'transition': 'transform 400ms ease-in-out' });
+        }, function () {
+            $(this).children('.locationimage').css({ 'transform': 'scale(1)', 'transition': 'transform 400ms ease-in-out' });
+            $(this).children('.locationname').css({ 'transform': 'scale(1)', 'transition': 'transform 400ms ease-in-out' });
+        })
     })
-})
 
+// used to hide feature sections and display the location details section.
+
+    $(function () {
+        $(".location").click(function () {
+                $("#locationdetails").removeClass("hide");
+                $("#home, #activities, #fooddrink, #accomodation").addClass("hide");
+        });
+    });
+
+})
 
 // Load map + map styling
-    function initMap() {
-        const map = new google.maps.Map(document.getElementById("map"), {
-            zoom: 12,
-            center: {
-                lat: 53.483959,
-                lng: -2.244644
-            },
-            styles: 
+function initMap() {
+    const map = new google.maps.Map(document.getElementById("map"), {
+        zoom: 12,
+        center: {
+            lat: 53.483959,
+            lng: -2.244644
+        },
+        styles:
             [
                 {
                     "featureType": "administrative",
@@ -151,5 +161,5 @@ $(function () {
                     ]
                 }
             ]
-        });
-    }
+    });
+}
