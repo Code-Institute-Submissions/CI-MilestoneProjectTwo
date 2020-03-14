@@ -137,6 +137,10 @@ body {
 
 /* Activities, Food & Drink, Accomodation */
 
+.activitiescontainer, .fooddrinkcontainer, .accomodationcontainer {
+    padding-bottom: 50px;
+}
+
 .featureheading{
     font-size: 3em;
     font-weight: 700;
@@ -149,18 +153,20 @@ body {
     justify-content: center;
     margin: 50px;
     padding: 0;
+    cursor: pointer;
 }
+
 
 .locationimage {
     height: 275px;
     width: 300px;
     min-width: 300px;;
     object-fit: cover;
-    cursor: pointer;
 }
 
 .locationname{
     position: absolute;
+    top:0;
     color: #fff;
     font-size: 1.25em;
     font-weight: 600;

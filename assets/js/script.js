@@ -2,7 +2,7 @@
 
 $(document).ready(function () {
 
-    // Used to hide sections when a nav item is selected.
+    // Used to display and hide sections when a nav item is selected.
 
     $(function () {
         $(".nav-link").click(function() { 
@@ -27,7 +27,7 @@ $(document).ready(function () {
     });
 
 
-    // Used to hide sections when a one of the home 'buttons' is selected.
+    // Used to display and hide sections when a one of the home 'buttons' is selected on the landing screen.
 
     $(function () {
         $(".feature").click(function() { 
@@ -47,6 +47,19 @@ $(document).ready(function () {
     });
     
 })
+
+
+// Used add styling to location divs when hovered over
+$(function () {
+    $(".location").hover(function() {
+        $(this).children('.locationimage').css({'transform' : 'scale(1.2)', 'transition' : 'transform 400ms ease-in-out'});
+        $(this).children('.locationname').css({'transform' : 'scale(1.2)' , 'transition' : 'transform 400ms ease-in-out'});
+    }, function() {
+        $(this).children('.locationimage').css({'transform' : 'scale(1)' , 'transition' : 'transform 400ms ease-in-out'});
+        $(this).children('.locationname').css({'transform' : 'scale(1)' , 'transition' : 'transform 400ms ease-in-out'});
+    })
+})
+
 
 // Load map + map styling
     function initMap() {
