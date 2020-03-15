@@ -51,12 +51,12 @@ $(document).ready(function () {
 
     // Used add styling to location divs when hovered over
     $(function () {
-        $(".location").hover(function () {
-            $(this).children('.locationimage').css({ 'transform': 'scale(1.2)', 'transition': 'transform 400ms ease-in-out' });
-            $(this).children('.locationname').css({ 'transform': 'scale(1.2)', 'transition': 'transform 400ms ease-in-out' });
+        $(".locationimage").hover(function () {
+            $(this).css({ 'transform': 'scale(1.2)', 'transition': 'transform 400ms ease-in-out' });
+            $(this).siblings('.locationname').css({ 'transform': 'scale(1.2)', 'transition': 'transform 400ms ease-in-out' });
         }, function () {
-            $(this).children('.locationimage').css({ 'transform': 'scale(1)', 'transition': 'transform 400ms ease-in-out' });
-            $(this).children('.locationname').css({ 'transform': 'scale(1)', 'transition': 'transform 400ms ease-in-out' });
+            $(this).css({ 'transform': 'scale(1)', 'transition': 'transform 400ms ease-in-out' });
+            $(this).siblings('.locationname').css({ 'transform': 'scale(1)', 'transition': 'transform 400ms ease-in-out' });
         })
     })
 
