@@ -71,15 +71,16 @@ $(document).ready(function () {
 
 })
 
-// Load map + map styling
+// Function to load map and add markers to each location
+
 function initMap() {
-    const map = new google.maps.Map(document.getElementById("map"), {
-        zoom: 12,
-        center: {
-            lat: 53.483959,
-            lng: -2.244644
-        },
-        styles:
+
+    $(".location").click(function () {
+
+        var mapOptions = {
+            center: new google.maps.LatLng(53.483959, -2.244644),
+            zoom: 12,
+            styles:
             [
                 {
                     "featureType": "administrative",
@@ -161,28 +162,18 @@ function initMap() {
                     ]
                 }
             ]
+        };
+
+        var map = new google.maps.Map(document.getElementById('map'), mapOptions);
+        
+        $.getJSON('assets/data/location_details.json', function (data) {
+            $.each(data.location_details, function (i, value) {
+                var markerLocation = new google.maps.LatLng(value.lat, value.lng);
+                var marker = new google.maps.Marker({
+                    position: markerLocation,
+                    map: map,
+                });
+            });
+        });
     });
 }
-
-// accessing data from JSON file
-
-function getData(cb) {
-    var xhr = new XMLHttpRequest();
-    xhr.open('GET', 'assets/data/location_details.json', true);
-    xhr.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) {
-            cb(JSON.parse(this.responseText));
-        }
-    };
-    xhr.send();
-}
-
-/*function printDataToConsole(data) {
-    console.log(data);
-}
-
-getData(printDataToConsole);*/
-
-
-
-
