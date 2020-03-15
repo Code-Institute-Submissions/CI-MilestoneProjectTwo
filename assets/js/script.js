@@ -171,7 +171,7 @@ function getData(cb) {
     xhr.open('GET', 'assets/data/location_details.json', true);
     xhr.onreadystatechange = function() {
         if (this.readyState == 4 && this.status == 200) {
-            console.log(JSON.parse(this.responseText));
+            cb(JSON.parse(this.responseText));
         }
     };
     xhr.send();
