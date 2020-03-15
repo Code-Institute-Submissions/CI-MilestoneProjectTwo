@@ -60,12 +60,12 @@ $(document).ready(function () {
         })
     })
 
-// used to hide feature sections and display the location details section.
+    // used to hide feature sections and display the location details section.
 
     $(function () {
         $(".location").click(function () {
-                $("#locationdetails").removeClass("hide");
-                $("#home, #activities, #fooddrink, #accomodation").addClass("hide");
+            $("#locationdetails").removeClass("hide");
+            $("#home, #activities, #fooddrink, #accomodation").addClass("hide");
         });
     });
 
@@ -163,3 +163,26 @@ function initMap() {
             ]
     });
 }
+
+// accessing data from JSON file
+
+function getData(cb) {
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', 'assets/data/location_details.json', true);
+    xhr.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            console.log(JSON.parse(this.responseText));
+        }
+    };
+    xhr.send();
+}
+
+/*function printDataToConsole(data) {
+    console.log(data);
+}
+
+getData(printDataToConsole);*/
+
+
+
+
