@@ -73,7 +73,7 @@ $(document).ready(function () {
 
 // Function to load & style map and add a marker to the map for the selected location
 
-var initMap = function() {
+var displayDetails = function() {
 
     $(".location").click(function () {
         var thisLocation = this.id;
@@ -164,18 +164,34 @@ var initMap = function() {
             ]
         };
 
+
+
         var map = new google.maps.Map(document.getElementById('map'), mapDefault);
         
+        // get the JSON file
         $.getJSON('assets/data/location_details.json', function (data) {
+            //iterate through each object
             $.each(data.location_details, function (i, value) {
+                //Where the ID of the selected location matches the an ID within the array
                 if (value.ID === thisLocation) {
+                    //identify the lat,lng location
                     var markerLocation = new google.maps.LatLng(value.lat, value.lng);
+                    //add a marker to the map at the relevant location
                     var marker = new google.maps.Marker({
                     position: markerLocation,
                     map: map,
-                    })
+                    });
+                //Display the applicable details of the selected location
+                document.getElementById("locationvenue").innerHTML = value.Name;
+                document.getElementById("locationtype").innerHTML = value.Type;
+                document.getElementById("locationsubtype").innerHTML = value.Subtype;
+                document.getElementById("locationwebsite").innerHTML = value.Website;
+                document.getElementById("locationphone").innerHTML = value.PhoneNumber;
+                document.getElementById("locationdescription").innerHTML = value.Description;
                 };
             });
         });
     });
 }
+
+
