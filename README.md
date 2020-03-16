@@ -60,6 +60,17 @@ Depending on which option is selected, the site will display a variety of locati
 
 [Desktop wireframe](https://github.com/lewisclark4/CI-MilestoneProjectTwo/blob/master/wireframes/Desktop%20Wireframes.pdf)
 
+### Surface
+
+The idea was to create a site which shows off the fun bubbly side of manchester, adopting the colours of the Manchester Worker Bee.
+
+The font of 'Indie Flower' was chosen as I felt that while retaining legibility, it also offers a fun and unique design to the site.
+It is described by the designer as "carefree and open" "with the bubbly, rounded edges".
+
+The deep yellow/ orange colour offers a comfortable contrast against 'black' and 'white' backgrounds without causing any strain to read.
+
+Ease of navigation was a key strategy for the site, and therefore there are clear and obvious effects when a user is able to interact with the site (e.g. the cursor is replace by a pointer, and the particular element will be visually interactive)
+
 ## Technologies & Tools
 1. HTML
 2. CSS
@@ -70,9 +81,11 @@ Depending on which option is selected, the site will display a variety of locati
 7. Cacoo (for wireframes)
 8. Responsinator (to check site responsiveness)
 9. Chrome DevTools (to utilise the console log to identify and fix bugs)
-10. W3C Markup Validation Service (to validate html)
-11. W3C CSS Validation Service (to validate css)
-12. GitHub & GitPod (repository & IDE)
+10. W3C Markup Validation Service (to validate HTML)
+11. W3C CSS Validation Service (to validate CSS)
+12. JSHint (to validate JS)
+13. GitHub & GitPod (repository & IDE)
+14. Styling Wizard: Google Maps APIs
 
 ## Features
 
