@@ -57,8 +57,8 @@ $(document).ready(function () {
         }, function () {
             $(this).css({ 'transform': 'scale(1)', 'transition': 'transform 400ms ease-in-out' });
             $(this).siblings('.locationname').css({ 'transform': 'scale(1)', 'transition': 'transform 400ms ease-in-out' });
-        })
-    })
+        });
+    });
 
     // used to hide feature sections and display the location details section.
 
@@ -69,11 +69,11 @@ $(document).ready(function () {
         });
     });
 
-})
+});
 
 // Function to load & style map and add a marker to the map for the selected location
 
-var displayDetails = function() {
+var displayDetails = function () {
 
     $(".location").click(function () {
         var thisLocation = this.id;
@@ -81,93 +81,93 @@ var displayDetails = function() {
             center: new google.maps.LatLng(53.483959, -2.244644),
             zoom: 12,
             styles:
-            [
-                {
-                    "featureType": "administrative",
-                    "elementType": "geometry",
-                    "stylers": [
-                        {
-                            "visibility": "off"
-                        }
-                    ]
-                },
-                {
-                    "featureType": "administrative.land_parcel",
-                    "elementType": "labels",
-                    "stylers": [
-                        {
-                            "visibility": "off"
-                        }
-                    ]
-                },
-                {
-                    "featureType": "administrative.land_parcel",
-                    "elementType": "labels.text",
-                    "stylers": [
-                        {
-                            "visibility": "off"
-                        }
-                    ]
-                },
-                {
-                    "featureType": "administrative.neighborhood",
-                    "elementType": "labels.text",
-                    "stylers": [
-                        {
-                            "visibility": "off"
-                        }
-                    ]
-                },
-                {
-                    "featureType": "poi",
-                    "stylers": [
-                        {
-                            "visibility": "off"
-                        }
-                    ]
-                },
-                {
-                    "featureType": "poi",
-                    "elementType": "labels.text",
-                    "stylers": [
-                        {
-                            "visibility": "off"
-                        }
-                    ]
-                },
-                {
-                    "featureType": "road",
-                    "elementType": "labels.icon",
-                    "stylers": [
-                        {
-                            "visibility": "off"
-                        }
-                    ]
-                },
-                {
-                    "featureType": "road.local",
-                    "elementType": "labels",
-                    "stylers": [
-                        {
-                            "visibility": "off"
-                        }
-                    ]
-                },
-                {
-                    "featureType": "transit",
-                    "stylers": [
-                        {
-                            "visibility": "off"
-                        }
-                    ]
-                }
-            ]
+                [
+                    {
+                        "featureType": "administrative",
+                        "elementType": "geometry",
+                        "stylers": [
+                            {
+                                "visibility": "off"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "administrative.land_parcel",
+                        "elementType": "labels",
+                        "stylers": [
+                            {
+                                "visibility": "off"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "administrative.land_parcel",
+                        "elementType": "labels.text",
+                        "stylers": [
+                            {
+                                "visibility": "off"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "administrative.neighborhood",
+                        "elementType": "labels.text",
+                        "stylers": [
+                            {
+                                "visibility": "off"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "poi",
+                        "stylers": [
+                            {
+                                "visibility": "off"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "poi",
+                        "elementType": "labels.text",
+                        "stylers": [
+                            {
+                                "visibility": "off"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "road",
+                        "elementType": "labels.icon",
+                        "stylers": [
+                            {
+                                "visibility": "off"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "road.local",
+                        "elementType": "labels",
+                        "stylers": [
+                            {
+                                "visibility": "off"
+                            }
+                        ]
+                    },
+                    {
+                        "featureType": "transit",
+                        "stylers": [
+                            {
+                                "visibility": "off"
+                            }
+                        ]
+                    }
+                ]
         };
 
 
 
-        var map = new google.maps.Map(document.getElementById('map'), mapDefault);
-        
+        const map = new google.maps.Map(document.getElementById('map'), mapDefault);
+
         // get the JSON file
         $.getJSON('assets/data/location_details.json', function (data) {
             //iterate through each object
@@ -178,20 +178,20 @@ var displayDetails = function() {
                     var markerLocation = new google.maps.LatLng(value.lat, value.lng);
                     //add a marker to the map at the relevant location
                     var marker = new google.maps.Marker({
-                    position: markerLocation,
-                    map: map,
+                        position: markerLocation,
+                        map: map,
                     });
-                //Display the applicable details of the selected location
-                document.getElementById("locationvenue").innerHTML = value.Name;
-                document.getElementById("locationtype").innerHTML = value.Type;
-                document.getElementById("locationsubtype").innerHTML = value.Subtype;
-                document.getElementById("locationwebsite").innerHTML = value.Website;
-                document.getElementById("locationphone").innerHTML = value.PhoneNumber;
-                document.getElementById("locationdescription").innerHTML = value.Description;
-                };
+                    //Display the applicable details of the selected location
+                    document.getElementById("locationvenue").innerHTML = value.Name;
+                    document.getElementById("locationtype").innerHTML = value.Type;
+                    document.getElementById("locationsubtype").innerHTML = value.Subtype;
+                    document.getElementById("locationwebsite").innerHTML = value.Website;
+                    document.getElementById("locationphone").innerHTML = value.PhoneNumber;
+                    document.getElementById("locationdescription").innerHTML = value.Description;
+                }
             });
         });
     });
-}
+};
 
 
