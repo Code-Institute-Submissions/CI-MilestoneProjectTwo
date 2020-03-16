@@ -71,13 +71,13 @@ $(document).ready(function () {
 
 })
 
-// Function to load map and add markers to each location
+// Function to load & style map and add a marker to the map for the selected location
 
-function initMap() {
+var initMap = function() {
 
     $(".location").click(function () {
-
-        var mapOptions = {
+        var thisLocation = this.id;
+        var mapDefault = {
             center: new google.maps.LatLng(53.483959, -2.244644),
             zoom: 12,
             styles:
@@ -164,15 +164,17 @@ function initMap() {
             ]
         };
 
-        var map = new google.maps.Map(document.getElementById('map'), mapOptions);
+        var map = new google.maps.Map(document.getElementById('map'), mapDefault);
         
         $.getJSON('assets/data/location_details.json', function (data) {
             $.each(data.location_details, function (i, value) {
-                var markerLocation = new google.maps.LatLng(value.lat, value.lng);
-                var marker = new google.maps.Marker({
+                if (value.ID === thisLocation) {
+                    var markerLocation = new google.maps.LatLng(value.lat, value.lng);
+                    var marker = new google.maps.Marker({
                     position: markerLocation,
                     map: map,
-                });
+                    })
+                };
             });
         });
     });
