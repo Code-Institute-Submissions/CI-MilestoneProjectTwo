@@ -26,9 +26,9 @@ Local resident looking to try something new:
 Even the local residents don't know everything... this site should allow them to look for some fun activities in the area, and maybe even grab a nice bite to eat.
 
 **Prospective visitor 4**
-Business Tripper:
+A working professional on a business trip:
 
-Whether a frequent commuter, or just someone on a one off business trip, there should be no issues finding a place to eat, or a comfortable nights sleep.
+Whether a frequent commuter, or just someone on a one off business trip, this visitor is just looking for a new a place to eat, or find a new home away from home.
 
 ### Strategy
 
@@ -54,17 +54,25 @@ Depending on which option is selected, the site will display a variety of locati
 
 ### Skeleton
 
-[Mobile wireframe]()
+[Mobile wireframe](https://github.com/lewisclark4/CI-MilestoneProjectTwo/blob/master/wireframes/Mobile%20Wireframes.pdf)
 
-[Tablet wireframe]()
+[Tablet wireframe](https://github.com/lewisclark4/CI-MilestoneProjectTwo/blob/master/wireframes/Tablet%20Wireframe.pdf)
 
-[Desktop wireframe]()
+[Desktop wireframe](https://github.com/lewisclark4/CI-MilestoneProjectTwo/blob/master/wireframes/Desktop%20Wireframes.pdf)
 
-## Technologies
-
-
-### Tools
-
+## Technologies & Tools
+1. HTML
+2. CSS
+3. Bootstrap 4
+4. JavaScript / jQuery
+5. Font Awesome (for icons - e.g. socials)
+6. TinyPNG (to compress images/ reduce file size).
+7. Cacoo (for wireframes)
+8. Responsinator (to check site responsiveness)
+9. Chrome DevTools (to utilise the console log to identify and fix bugs)
+10. W3C Markup Validation Service (to validate html)
+11. W3C CSS Validation Service (to validate css)
+12. GitHub & GitPod (repository & IDE)
 
 ## Features
 
@@ -74,19 +82,39 @@ Depending on which option is selected, the site will display a variety of locati
 
 
 ## Deployment
+The site is deployed on GitHub. 
+
+1. Create a git hub repository.
+2. Open in GitPod
+3. Create index.html file.
+4. Add the file to staging area using the command git add index.html (or git add .)
+5. We then want to commit the file, with the command git commit -m "Intial commit" (standard practice for the first commit into a repository).
+6. We then want to push the file back to the repository, which can be done with the command git push.
+7. You should now be able to see this commit in your repository.
+8. You can repeat steps 5-7 for any further updates to the file (though your git commit message should contain more detail regarding the updates).
+9. In your repository, select the settings option.
+10. Scroll Down to the github pages section and click on the dropdown option under source, and select master branch.
+11. This now publishes the site, and provides the URL to that published site.
+
+The site can also be ran locally by creating a clone of this repository. In the git hub repository, click on the clone or download button and copy the URL.
+
+Within a new git terminal, you can clone the project with the command git clone "Copied URL"
 
 ## Credits
 ### Content
-
+All of the location description text has been sourced directly from the locations' own website.
 
 ### Images
-My images were sourced from the following stock images library, and were all free for use, sharing or modification, even commercially.
+Home images were sourced from the following stock images library, and were all free for use, sharing or modification, even commercially.
 
 [Flickr](https://www.flickr.com/)
-
-[Unsplash](https://unsplash.com/)
-
 [Pixabay](https://pixabay.com/)
 
+All location images were sourced directly from the locations' own website.
 
 ### Acknowledgements
+
+I used [VisitManchester](https://www.visitmanchester.com/) for inspiration on design and locations to choose for my own site.
+I used [api.jquery](https://api.jquery.com/) for guidance on formatting of the functions implemented within my site (particularly for the $.each() function which allowed me to iterate through my JSON data to dynamically populate location details).
+I have been watching the 'JavaScript: From Fundamentals to Functional JS' course on [Pluralsight](https://app.pluralsight.com/id/) by Bianca Gandolfo to supplement my learning from the Code Institute.
+
