@@ -4,7 +4,7 @@ $(document).ready(function () {
 
     // Used to display and hide feature sections when a nav item is selected.
 
-    $(function navHideSections () {
+    $(function navHideSections() {
         //when a nav-link is selected
         $(".nav-link").click(function () {
             // if the ID of that navlink = navhome
@@ -13,19 +13,19 @@ $(document).ready(function () {
                 $("#home").removeClass("hide");
                 //hide all other sections
                 $("#activities, #fooddrink ,#accomodation, #locationdetails").addClass("hide");
-            // if the ID of that navlink = navactivities
+                // if the ID of that navlink = navactivities
             } else if ($(this).attr("id") === "navactivities") {
                 //display the activities section
                 $("#activities").removeClass("hide");
                 //hide all other sections
                 $("#home, #fooddrink, #accomodation, #locationdetails").addClass("hide");
-            // if the ID of that navlink = navfooddrink
+                // if the ID of that navlink = navfooddrink
             } else if ($(this).attr("id") === "navfooddrink") {
                 //display the fooddrink section
                 $("#fooddrink").removeClass("hide");
                 //hide all other sections
                 $("#home, #activities, #accomodation, #locationdetails").addClass("hide");
-            // if the ID of that navlink = navaccomodation
+                // if the ID of that navlink = navaccomodation
             } else if ($(this).attr("id") === "navaccomodation") {
                 //display the Accomodation section
                 $("#accomodation").removeClass("hide");
@@ -76,7 +76,7 @@ $(document).ready(function () {
 
     // used to hide feature sections and display the location details section.
 
-    $(function displayLocationDetails () {
+    $(function displayLocationDetails() {
         //when a location is selected
         $(".location").click(function () {
             //display the location details section
@@ -94,56 +94,20 @@ function initMap() {
     //default the map center, zoom and styling
     var mapDefault = {
         center: new google.maps.LatLng(53.483959, -2.244644),
-        zoom: 12,
+        zoom: 13,
         styles:
             [
                 {
-                    "featureType": "administrative",
-                    "elementType": "geometry",
-                    "stylers": [
-                        {
-                            "visibility": "off"
-                        }
-                    ]
-                },
-                {
-                    "featureType": "administrative.land_parcel",
-                    "elementType": "labels",
-                    "stylers": [
-                        {
-                            "visibility": "off"
-                        }
-                    ]
-                },
-                {
-                    "featureType": "administrative.land_parcel",
-                    "elementType": "labels.text",
-                    "stylers": [
-                        {
-                            "visibility": "off"
-                        }
-                    ]
-                },
-                {
-                    "featureType": "administrative.neighborhood",
-                    "elementType": "labels.text",
-                    "stylers": [
-                        {
-                            "visibility": "off"
-                        }
-                    ]
-                },
-                {
-                    "featureType": "poi",
-                    "stylers": [
-                        {
-                            "visibility": "off"
-                        }
-                    ]
-                },
-                {
                     "featureType": "poi",
                     "elementType": "labels.text",
+                    "stylers": [
+                        {
+                            "visibility": "off"
+                        }
+                    ]
+                },
+                {
+                    "featureType": "poi.business",
                     "stylers": [
                         {
                             "visibility": "off"
@@ -152,16 +116,16 @@ function initMap() {
                 },
                 {
                     "featureType": "road",
-                    "elementType": "labels.icon",
+                    "elementType": "labels",
                     "stylers": [
                         {
-                            "visibility": "off"
+                            "saturation": 30
                         }
                     ]
                 },
                 {
-                    "featureType": "road.local",
-                    "elementType": "labels",
+                    "featureType": "road",
+                    "elementType": "labels.icon",
                     "stylers": [
                         {
                             "visibility": "off"

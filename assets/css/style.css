@@ -194,7 +194,12 @@ body {
     color: #000;
     text-decoration: underline;
     text-decoration-color: #e6a723;
-    
+}
+
+#locationwebsite:hover{
+    color: #e6a723;
+    text-decoration: underline;
+    text-decoration-color: #e6a723;
 }
 
 #locationvenue {
@@ -206,7 +211,7 @@ body {
 }
 
 #map {
-    height: 65vh;
+    height: 75vh;
     width: 65vw;
 }
 
