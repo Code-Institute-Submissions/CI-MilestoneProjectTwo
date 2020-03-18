@@ -174,13 +174,40 @@ body {
     background-color: rgba(230, 167, 35, 0.8);
 }
 
+
+/* Activities, Food & Drink, Accomodation details */
 #locationdetails{
     padding-top: 100px;
     height: 100vh;
     width: 100vw;
 }
 
+.details {
+    border: 2px solid #e6a723;
+}
+
+.details p i  {
+    color:  #e6a723;
+}
+
+#locationwebsite {
+    color: #000;
+    text-decoration: underline;
+    text-decoration-color: #e6a723;
+    
+}
+
+#locationvenue {
+    font-weight: 600;
+}
+
+#locationdetails p{
+    font-size: 1.25em;
+}
+
 #map {
-    height: 50vh;
+    height: 65vh;
     width: 65vw;
 }
+
+

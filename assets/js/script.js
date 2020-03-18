@@ -217,9 +217,8 @@ function displayDetails() {
                     markers.push(marker);
                     //Display the applicable details of the selected location
                     document.getElementById("locationvenue").innerHTML = value.Name;
-                    document.getElementById("locationtype").innerHTML = value.Type;
-                    document.getElementById("locationsubtype").innerHTML = value.Subtype;
-                    document.getElementById("locationwebsite").innerHTML = value.Website;
+                    document.getElementById("locationtype").innerHTML = value.Type + " - " + value.Subtype;
+                    document.getElementById("locationwebsite").href = value.Website;
                     document.getElementById("locationphone").innerHTML = value.PhoneNumber;
                     document.getElementById("locationdescription").innerHTML = value.Description;
                 }

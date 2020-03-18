@@ -46,7 +46,7 @@
 			<div class="opaque-overlay">
 				<div class="row no-gutters justify-content-center">
 					<div class="welcomecontainer">
-						<h1 id="welcome" class="d-none d-md-block" >Welcome to Manchester!</h1>
+						<h1 id="welcome" class="d-none d-md-block">Welcome to Manchester!</h1>
 						<h4 id="tagline" class="d-none d-md-block">Check out what our wonderful city has to offer</h4>
 					</div>
 				</div>
@@ -66,40 +66,40 @@
 			</div>
 		</div>
 	</section>
-		<!--/Home-->
+	<!--/Home-->
 
-		<!--Footer-->
-		<footer id="footer" class="justify-content-center d-none d-md-block">
-			<div class="col-sm-12">
-				<ul class="list-inline">
-					<li class="list-inline-item socialicon">
-						<a href="https://en-gb.facebook.com/" target="_blank" aria-label="Like us on Facebook">
-							<i class="fab fa-facebook-square" aria-hidden="true"></i>
-							<span class="sr-only">Facebook</span>
-						</a>
-					</li>
-					<li class="list-inline-item socialicon">
-						<a href="https://twitter.com/?lang=en-gb" target="_blank" aria-label="Follow us on Twitter">
-							<i class="fab fa-twitter-square" aria-hidden="true"></i>
-							<span class="sr-only">Twitter</span>
-						</a>
-					</li>
-					<li class="list-inline-item socialicon">
-						<a href="https://www.instagram.com/?hl=en" target="_blank" aria-label="Follow us on Instagram">
-							<i class="fab fa-instagram" aria-hidden="true"></i>
-							<span class="sr-only">Instagram</span>
-						</a>
-					</li>
-					<li class="list-inline-item socialicon">
-						<a href="http://www.youtube.com/" target="_blank" aria-label="Watch us on Youtube">
-							<i class="fab fa-youtube-square" aria-hidden="true"></i>
-							<span class="sr-only">YouTube</span>
-						</a>
-					</li>
-				</ul>
-			</div>
-		</footer>
-		<!--/Footer-->
+	<!--Footer-->
+	<footer id="footer" class="justify-content-center d-none d-md-block">
+		<div class="col-sm-12">
+			<ul class="list-inline">
+				<li class="list-inline-item socialicon">
+					<a href="https://en-gb.facebook.com/" target="_blank" aria-label="Like us on Facebook">
+						<i class="fab fa-facebook-square" aria-hidden="true"></i>
+						<span class="sr-only">Facebook</span>
+					</a>
+				</li>
+				<li class="list-inline-item socialicon">
+					<a href="https://twitter.com/?lang=en-gb" target="_blank" aria-label="Follow us on Twitter">
+						<i class="fab fa-twitter-square" aria-hidden="true"></i>
+						<span class="sr-only">Twitter</span>
+					</a>
+				</li>
+				<li class="list-inline-item socialicon">
+					<a href="https://www.instagram.com/?hl=en" target="_blank" aria-label="Follow us on Instagram">
+						<i class="fab fa-instagram" aria-hidden="true"></i>
+						<span class="sr-only">Instagram</span>
+					</a>
+				</li>
+				<li class="list-inline-item socialicon">
+					<a href="http://www.youtube.com/" target="_blank" aria-label="Watch us on Youtube">
+						<i class="fab fa-youtube-square" aria-hidden="true"></i>
+						<span class="sr-only">YouTube</span>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</footer>
+	<!--/Footer-->
 
 	<!--Activities-->
 
@@ -278,13 +278,20 @@
 	<section id="locationdetails" class="hide">
 		<div class="container-fluid">
 			<div class="row justify-content-center">
-				<div class="col-12 col-md-3 col-lg-3">
-					<p id="locationvenue">Location Name</p>
-					<p id="locationtype">Location Type</p>
-					<p id="locationsubtype">Location Sub Type</p>
-					<p id="locationwebsite">Website</p>
-					<p id="locationphone">Phone Number</p>
-                    <p id="locationdescription">Description</p>
+				<div class="col-12 col-md-3 col-lg-3 details">
+					<h2 id="locationvenue"></h3>
+					<p id="locationtype"></p>
+					<p>
+						<i class="fab fa-internet-explorer" aria-hidden="true"></i>
+						<span class="sr-only">Website</span>
+						<a id="locationwebsite" href="#" target="_blank">Website</a>
+					</p>
+					<p>
+						<i class="fas fa-phone-square" aria-hidden="true"></i>
+						<span class="sr-only">Phone</span>
+                        <a id="locationphone"></a>
+					</p>
+					<p id="locationdescription">Description</p>
 				</div>
 				<div class="col-10 col-md-8 col-lg-6" id="map"></div>
 			</div>
@@ -299,7 +306,9 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
-	<script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
+	<script
+		src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js">
+	</script>
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDDHHyac2SiOYPNYxXMK7rqJjnB8nCaaxE"></script>
 	<script src="assets/js/script.js"></script>
 
