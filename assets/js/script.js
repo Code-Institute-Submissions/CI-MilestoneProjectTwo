@@ -4,7 +4,7 @@ $(document).ready(function () {
 
     // Used to display and hide feature sections when a nav item is selected.
 
-    $(function () {
+    $(function navHideSections () {
         $(".nav-link").click(function () {
             if ($(this).attr("id") === "navhome") {
                 $("#home").removeClass("hide");
@@ -29,7 +29,7 @@ $(document).ready(function () {
 
     // Used to display and hide feature sections when a one of the home 'buttons' is selected on the landing screen.
 
-    $(function () {
+    $(function homeHideSections() {
         $(".feature").click(function () {
             if ($(this).attr("id") === "homeactivities") {
                 $("#activities").removeClass("hide");
@@ -50,7 +50,7 @@ $(document).ready(function () {
 
 
     // Used add styling to location divs when hovered over
-    $(function () {
+    $(function transformLocationImage() {
         $(".locationimage").hover(function () {
             $(this).css({ 'transform': 'scale(1.2)', 'transition': 'transform 400ms ease-in-out' });
             $(this).siblings('.locationname').css({ 'transform': 'scale(1.2)', 'transition': 'transform 400ms ease-in-out' });
@@ -62,7 +62,7 @@ $(document).ready(function () {
 
     // used to hide feature sections and display the location details section.
 
-    $(function () {
+    $(function displayLocationDetails () {
         $(".location").click(function () {
             $("#locationdetails").removeClass("hide");
             $("#home, #activities, #fooddrink, #accomodation").addClass("hide");
