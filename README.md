@@ -93,6 +93,12 @@ Ease of navigation was a key strategy for the site, and therefore there are clea
 
 ## Testing
 
+### Bugs Encoutered & Fixed
+1. Minor issue causing some sections to stack, so I added a container around the landing page and applied 100vh/ 100vw to prevent the stacking.
+2. Minor bug where the location details didn't hide after being displayed. I added this ID into the navHideSections & homeHideSections to add the class of hide.
+3. I had an issue when I was looking at a location, then navigating back to look at another location, the map would keep adding markers to the map.
+I created (with guidance from the developers.google.com) the DeleteMarkers function to clear the map each time the DisplayDetails function was called.
+
 
 ## Deployment
 The site is deployed on GitHub. 
@@ -115,6 +121,8 @@ Within a new git terminal, you can clone the project with the command git clone 
 
 ## Credits
 ### Content
+All code has been written by myself. There have been instances where I have used online sources for guidance on particular issues, but the code has been adapted by myself for the purpose of my site (see Acknowledgements).
+
 All of the location description text has been sourced directly from the locations' own website.
 
 ### Images
@@ -129,5 +137,6 @@ All location images were sourced directly from the locations' own website.
 
 I used [VisitManchester](https://www.visitmanchester.com/) for inspiration on design and locations to choose for my own site.
 I used [api.jquery](https://api.jquery.com/) for guidance on formatting of the functions implemented within my site (particularly for the $.each() function which allowed me to iterate through my JSON data to dynamically populate location details).
+I used [developers.google.com](https://developers.google.com/maps/documentation/javascript/examples/marker-remove) for guidance on removing markers from the map.
 I have been watching the 'JavaScript: From Fundamentals to Functional JS' course on [Pluralsight](https://app.pluralsight.com/id/) by Bianca Gandolfo to supplement my learning from the Code Institute.
 
