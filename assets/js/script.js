@@ -148,7 +148,7 @@ function initMap() {
 
 // create markers array (to later enable us to remove displayed markers)
 
-var markers = []
+var markers = [];
 
 // Function to display details and map marker of the selected location 
 
@@ -189,7 +189,7 @@ function displayDetails() {
             });
         });
     });
-};
+}
 
 
 // function to iterate through the markers array, and set a clear map again
@@ -199,7 +199,7 @@ function deleteMarkers(map) {
     }
     //clear the markers array
     markers = [];
-};
+}
 
 // Call the displayDetails function
 displayDetails();
