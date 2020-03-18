@@ -135,6 +135,16 @@ body {
     transition: .25s ease-in-out;
 }
 
+/* Main Map */
+ #mainmap {
+     padding-top: 10vh;
+     padding-left: 0;
+     padding-right: 0;
+     height: 90vh;
+     width: 100vw;
+ }
+
+
 /* Activities, Food & Drink, Accomodation */
 
 .activitiescontainer, .fooddrinkcontainer, .accomodationcontainer {

@@ -201,5 +201,5 @@ function deleteMarkers(map) {
     markers = [];
 }
 
-// Call the displayDetails function
+// Call the functions
 displayDetails();
