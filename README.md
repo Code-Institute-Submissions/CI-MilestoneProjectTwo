@@ -96,8 +96,10 @@ Ease of navigation was a key strategy for the site, and therefore there are clea
 ### Bugs Encoutered & Fixed
 1. Minor issue causing some sections to stack, so I added a container around the landing page and applied 100vh/ 100vw to prevent the stacking.
 2. Minor bug where the location details didn't hide after being displayed. I added this ID into the navHideSections & homeHideSections to add the class of hide.
-3. I had an issue when I was looking at a location, then navigating back to look at another location, the map would keep adding markers to the map.
-I created (with guidance from the developers.google.com) the DeleteMarkers function to clear the map each time the DisplayDetails function was called.
+3. When creating my displayDetails function, i was receiving the error, “$.getJSON is not a function”. This was because I was using a jquery 'slim' CDN which does not contain the getJSON method. Therefore I changed this to receive a CDN that did contain this method.
+4. When creating my initMap function, I was receiving the error 'google is not defined'. I found a solution on stackoverflow, that suggested to remove the async defer script tags. When I did this, it resolved the error.
+5. I had an issue when I was looking at a location, then navigating back to look at another location, the map would keep adding markers to the map. I created (with guidance from the developers.google.com) the DeleteMarkers function to clear the map each time the DisplayDetails function was called.
+
 
 
 ## Deployment
@@ -138,5 +140,7 @@ All location images were sourced directly from the locations' own website.
 I used [VisitManchester](https://www.visitmanchester.com/) for inspiration on design and locations to choose for my own site.
 I used [api.jquery](https://api.jquery.com/) for guidance on formatting of the functions implemented within my site (particularly for the $.each() function which allowed me to iterate through my JSON data to dynamically populate location details).
 I used [developers.google.com](https://developers.google.com/maps/documentation/javascript/examples/marker-remove) for guidance on removing markers from the map.
+I used [Stackoverflow](https://stackoverflow.com/questions/40600396/jquery-issue-typeerror-getjson-is-not-a-function) for guidance on my getJSON bug.
+I used [Stackoverflow](https://stackoverflow.com/questions/12249136/referenceerror-google-is-not-defined/12252771) for guidance on my google not defined bug.
 I have been watching the 'JavaScript: From Fundamentals to Functional JS' course on [Pluralsight](https://app.pluralsight.com/id/) by Bianca Gandolfo to supplement my learning from the Code Institute.
 
