@@ -71,9 +71,7 @@ $(document).ready(function () {
 
 });
 
-// Function to load & style map and add a marker to the map for the selected location
-
-var map;
+// Function to load & style map
 
 function initMap() {
     var mapDefault = {
@@ -165,11 +163,18 @@ function initMap() {
     map = new google.maps.Map(document.getElementById("map"), mapDefault);
 }
 
+// create markers array (to later enable us to remove displayed markers)
+
 var markers = []
 
+// Function to display details and map marker of the selected location 
+
 function displayDetails() {
+    //call the initMap function
     initMap();
+
     $(".location").click(function () {
+        // define the thisLocation variable as the ID of the selected location (to allow us to identify applicable details in the JSON data)
         var thisLocation = this.id;
         // get the JSON file
         $.getJSON('assets/data/location_details.json', function (data) {
@@ -185,6 +190,7 @@ function displayDetails() {
                         position: markerLocation,
                         map: map,
                     });
+                    // add marker details into the marker array (to be able to remove later)
                     markers.push(marker);
                     //Display the applicable details of the selected location
                     document.getElementById("locationvenue").innerHTML = value.Name;
@@ -200,16 +206,14 @@ function displayDetails() {
 };
 
 
-
+// function to iterate through the markers array, and set a clear map again
 function deleteMarkers(map) {
     for (var i = 0; i < markers.length; i++) {
         markers[i].setMap(map);
     }
+    //clear the markers array
     markers = [];
 };
 
-
-
-
-
+// Call the displayDetails function
 displayDetails();
