@@ -232,8 +232,6 @@ function mainMapMarkers() {
 
         else if ($(this).attr("id") === "accomodationbutton"){
             var type = "Accomodation"}
-        //remove any markers currently displayed on the map
-        deleteMarkers();
         // get the JSON file
         $.getJSON('assets/data/location_details.json', function (data) {
             //iterate through each object
@@ -251,6 +249,13 @@ function mainMapMarkers() {
                     markers.push(marker);
                 }
             });
+            //remove any markers currently displayed on the map
+            deleteMarkers();
+            var markerCluster = new MarkerClusterer(map2, markers, { imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m' });
         });
     });
+    
+    
 }
+
+
