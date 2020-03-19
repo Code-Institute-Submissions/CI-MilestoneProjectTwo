@@ -146,7 +146,7 @@ body {
 }
 
 .socialicon a i:hover{
-    color: #000;
+    color:  rgba(0, 0, 0, 0.8);
     transition: .25s ease-in-out;
 }
 
@@ -224,6 +224,8 @@ body {
 
 .details {
     border: 2px solid #e6a723;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
 }
 
 .details p i  {
@@ -231,7 +233,7 @@ body {
 }
 
 #locationwebsite {
-    color: #000;
+    color: #fff;
     text-decoration: underline;
     text-decoration-color: #e6a723;
 }
