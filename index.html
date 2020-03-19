@@ -5,8 +5,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css"
-		type="text/css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css"type="text/css" />
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Indie+Flower&display=swap">
 	<link rel="stylesheet" href="assets/css/style.css" type="text/css" />
@@ -23,17 +22,14 @@
 				<p class="navbar-brand">Go MCR</p>
 			</div>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarcollapse" aria-controls="navbarcollapse" aria-expanded="false" aria-label="Toggle navigation">
-                                <span class="navbar-toggler-icon"></span>
-                            </button>
+                <span class="navbar-toggler-icon"></span>
+            </button>
 			<div class="collapse navbar-collapse" id="navbarcollapse">
 				<ul class="navbar-nav ml-auto">
 					<li class="nav-item mr-3"><a id="navhome" class="nav-link" href="#home">Home</a></li>
-					<li class="nav-item mr-3"><a id="navactivities" class="nav-link" href="#activities">Activities</a>
-					</li>
-					<li class="nav-item mr-3"><a id="navfooddrink" class="nav-link" href="#fooddrink">Food & Drink</a>
-					</li>
-					<li class="nav-item mr-3"><a id="navaccomodation" class="nav-link"
-							href="#accomodation">Accomodation</a></li>
+					<li class="nav-item mr-3"><a id="navactivities" class="nav-link" href="#activities">Activities</a></li>
+					<li class="nav-item mr-3"><a id="navfooddrink" class="nav-link" href="#fooddrink">Food & Drink</a></li>
+					<li class="nav-item mr-3"><a id="navaccomodation" class="nav-link" href="#accomodation">Accomodation</a></li>
 				</ul>
 			</div>
 		</nav>
@@ -61,6 +57,9 @@
 						<div id="homeaccomodation" class="col-sm-6 col-lg-3 feature">
 							<p class="m-0">Accomodation</p>
 						</div>
+					</div>
+					<div class="row justify-content-center">
+                            <div id="arrow"></div>
 					</div>
 				</div>
 			</div>
@@ -104,22 +103,22 @@
 	<!--All locations map-->
 
 	<section id="mainmap" class="container-fluid m-0">
-        <div class="row justify-content-center">
-            <div class="col-sm-10 col-md-6">
-                <button id="activitiesbutton" class="locationbutton">Activities</button>
-                <button id="fooddrinkbutton" class="locationbutton">Food & Drink</button>
-                <button id="accomodationbutton" class="locationbutton">Accomodation</button>
-            </div>
-            <div class="col-sm-10 col-md-4"></div>
-        </div>
-        <div class="row justify-content-center">
-            <div class="col-sm-10 col-md-6" id="map2"></div>
-            <div class="col-sm-10 col-md-4"></div>
-        </div>
+		<div class="row justify-content-center">
+			<div class="col-sm-10 col-md-6">
+				<button id="activitiesbutton" class="locationbutton">Activities</button>
+				<button id="fooddrinkbutton" class="locationbutton">Food & Drink</button>
+				<button id="accomodationbutton" class="locationbutton">Accomodation</button>
+			</div>
+			<div class="col-sm-10 col-md-4"></div>
+		</div>
+		<div class="row justify-content-center">
+			<div class="col-sm-10 col-md-6" id="map2"></div>
+			<div class="col-sm-10 col-md-4"></div>
+		</div>
 	</section>
 
 	<!--/All locations map-->
-    
+
 
 	<!--Activities-->
 
@@ -312,7 +311,7 @@
 							<span class="sr-only">Phone</span>
 							<a id="locationphone"></a>
 						</p>
-						<p id="locationdescription">Description</p>
+						<p id="locationdescription"></p>
 				</div>
 				<div class="col-10 col-md-8 col-lg-6" id="map"></div>
 			</div>
@@ -327,9 +326,7 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
-	<script
-		src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js">
-	</script>
+	<script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDDHHyac2SiOYPNYxXMK7rqJjnB8nCaaxE"></script>
 	<script src="assets/js/script.js"></script>
 

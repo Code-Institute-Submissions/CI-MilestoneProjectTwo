@@ -2,6 +2,15 @@
 
 $(document).ready(function () {
 
+// function to scroll to the main map section if the arrow is clicked
+    $("#arrow").click(function() {
+        $('html,body').animate({
+            scrollTop: $("#mainmap").offset().top},
+            '400ms');
+    });
+
+
+
     // Used to display and hide feature sections when a nav item is selected.
 
     $(function navHideSections() {
@@ -10,7 +19,7 @@ $(document).ready(function () {
             // if the ID of that navlink = navhome
             if ($(this).attr("id") === "navhome") {
                 //display the home section
-                $("#home").removeClass("hide");
+                $("#home, #mainmap").removeClass("hide");
                 //hide all other sections
                 $("#activities, #fooddrink ,#accomodation, #locationdetails").addClass("hide");
                 // if the ID of that navlink = navactivities
@@ -18,19 +27,19 @@ $(document).ready(function () {
                 //display the activities section
                 $("#activities").removeClass("hide");
                 //hide all other sections
-                $("#home, #fooddrink, #accomodation, #locationdetails").addClass("hide");
+                $("#home, #mainmap, #fooddrink, #accomodation, #locationdetails").addClass("hide");
                 // if the ID of that navlink = navfooddrink
             } else if ($(this).attr("id") === "navfooddrink") {
                 //display the fooddrink section
                 $("#fooddrink").removeClass("hide");
                 //hide all other sections
-                $("#home, #activities, #accomodation, #locationdetails").addClass("hide");
+                $("#home, #mainmap, #activities, #accomodation, #locationdetails").addClass("hide");
                 // if the ID of that navlink = navaccomodation
             } else if ($(this).attr("id") === "navaccomodation") {
                 //display the Accomodation section
                 $("#accomodation").removeClass("hide");
                 //hide all other sections
-                $("#home, #activities, #fooddrink, #locationdetails").addClass("hide");
+                $("#home, #mainmap, #activities, #fooddrink, #locationdetails").addClass("hide");
             }
         });
     });
@@ -42,15 +51,15 @@ $(document).ready(function () {
         $(".feature").click(function () {
             if ($(this).attr("id") === "homeactivities") {
                 $("#activities").removeClass("hide");
-                $("#home, #fooddrink, #accomodation, #locationdetails").addClass("hide");
+                $("#home, #mainmap, #fooddrink, #accomodation, #locationdetails").addClass("hide");
 
             } else if ($(this).attr("id") === "homefooddrink") {
                 $("#fooddrink").removeClass("hide");
-                $("#home, #activities, #accomodation, #locationdetails").addClass("hide");
+                $("#home, #mainmap, #activities, #accomodation, #locationdetails").addClass("hide");
 
             } else if ($(this).attr("id") === "homeaccomodation") {
                 $("#accomodation").removeClass("hide");
-                $("#home, #activities, #fooddrink, #locationdetails").addClass("hide");
+                $("#home, #mainmap, #activities, #fooddrink, #locationdetails").addClass("hide");
             }
         });
     });

@@ -107,6 +107,21 @@ body {
     transition: .25s ease-in-out;
 }
 
+
+#arrow{
+    margin-top: 2em;
+    height: 25px;
+    width: 25px;
+    border-style: solid;
+    border-color: #e6a723;
+    border-width: 0px 4px 4px 0px;
+    transform: rotate(45deg);
+    transition: border-width 150ms ease-in-out;
+    cursor: pointer;
+}
+
+
+
 /* footer */
 #footer {
     position: fixed;
