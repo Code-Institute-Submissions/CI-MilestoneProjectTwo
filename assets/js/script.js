@@ -94,7 +94,7 @@ function initMap() {
     //default the map center, zoom and styling
     var mapDefault = {
         center: new google.maps.LatLng(53.483959, -2.244644),
-        zoom: 13,
+        zoom: 12,
         styles:
             [
                 {
@@ -142,8 +142,9 @@ function initMap() {
                 }
             ]
     };
-    //place the google map within the ID 'map' and apply the mapDefault variable
+    //define new google map variables (for each map) and apply the mapDefault styles
     map = new google.maps.Map(document.getElementById("map"), mapDefault);
+    map2 = new google.maps.Map(document.getElementById("map2"), mapDefault);
 }
 
 // create markers array (to later enable us to remove displayed markers)
@@ -177,6 +178,7 @@ function displayDetails() {
                     });
                     // center the map over the markerlocation
                     map.panTo(center);
+                    map.setZoom(15);
                     // add marker details into the marker array (to be able to remove later)
                     markers.push(marker);
                     //Display the applicable details of the selected location
