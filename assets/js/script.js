@@ -1,3 +1,7 @@
+// create markers array (to later enable us to remove displayed markers)
+
+var markers = [];
+
 // Wait for site to load before initiating any js
 
 $(document).ready(function () {
@@ -8,7 +12,6 @@ $(document).ready(function () {
             scrollTop: $("#mainmap").offset().top},
             '400ms');
     });
-
 
 
     // Used to display and hide feature sections when a nav item is selected.
@@ -156,9 +159,43 @@ function initMap() {
     map2 = new google.maps.Map(document.getElementById("map2"), mapDefault);
 }
 
-// create markers array (to later enable us to remove displayed markers)
+function mainMapMarkers() {
+    $(".locationbutton").click(function () {
+        //call the initMap function
+            initMap();
+        //remove any markers currently displayed on the map
+            deleteMarkers();
+        // define the type variable as the ID of the selected button (to allow us to identify applicable details in the JSON data)
+        if ($(this).attr("id") === "activitiesbutton"){
+            var type = "Activities"}
 
-var markers = [];
+        else if ($(this).attr("id") === "fooddrinkbutton"){
+            var type = "Food & Drink"}
+
+        else if ($(this).attr("id") === "accomodationbutton"){
+            var type = "Accomodation"}
+        // get the JSON file
+        $.getJSON('assets/data/location_details.json', function (data) {
+            //iterate through each object
+            $.each(data.location_details, function (i, value) {
+                //Where the ID of the selected type matches the Type within the array
+                if (value.Type === type) {
+                    //identify the lat,lng location
+                    var markerLocation = new google.maps.LatLng(value.lat, value.lng);
+                    //add a marker to the map at the relevant locations
+                    var marker = new google.maps.Marker({
+                        position: markerLocation,
+                        map: map2,
+                    });
+                    // add marker details into the marker array (to be able to remove later)
+                    markers.push(marker);
+                }
+            });
+            //add the marker clusterer, and pass in the map, markers array and clusterer image
+            var markerCluster = new MarkerClusterer(map2, markers, { imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m' });
+        });
+    });
+}
 
 // Function to display details and map marker of the selected location 
 
@@ -216,46 +253,5 @@ function deleteMarkers(map) {
 // Call the functions
 displayDetails();
 mainMapMarkers();
-
-
-
-function mainMapMarkers() {
-    //call the initMap function
-    initMap();
-    $(".locationbutton").click(function () {
-        // define the type variable as the ID of the selected button (to allow us to identify applicable details in the JSON data)
-        if ($(this).attr("id") === "activitiesbutton"){
-            var type = "Activities"}
-
-        else if ($(this).attr("id") === "fooddrinkbutton"){
-            var type = "Food & Drink"}
-
-        else if ($(this).attr("id") === "accomodationbutton"){
-            var type = "Accomodation"}
-        // get the JSON file
-        $.getJSON('assets/data/location_details.json', function (data) {
-            //iterate through each object
-            $.each(data.location_details, function (i, value) {
-                //Where the ID of the selected type matches the Type within the array
-                if (value.Type === type) {
-                    //identify the lat,lng location
-                    var markerLocation = new google.maps.LatLng(value.lat, value.lng);
-                    //add a marker to the map at the relevant locations
-                    var marker = new google.maps.Marker({
-                        position: markerLocation,
-                        map: map2,
-                    });
-                    // add marker details into the marker array (to be able to remove later)
-                    markers.push(marker);
-                }
-            });
-            //remove any markers currently displayed on the map
-            deleteMarkers();
-            var markerCluster = new MarkerClusterer(map2, markers, { imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m' });
-        });
-    });
-    
-    
-}
 
 
