@@ -139,13 +139,12 @@ All location images were sourced directly from the locations' own website.
 
 ### Acknowledgements
 
-I used [VisitManchester](https://www.visitmanchester.com/) for inspiration on design and locations to choose for my own site.
-I used [api.jquery](https://api.jquery.com/) for guidance on formatting of the functions implemented within my site (particularly for the $.each() function which allowed me to iterate through my JSON data to dynamically populate location details).
-I used [developers.google.com](https://developers.google.com/maps/documentation/javascript/examples/marker-remove) for guidance on removing markers from the map.
-I used [Stackoverflow](https://stackoverflow.com/questions/40600396/jquery-issue-typeerror-getjson-is-not-a-function) for guidance on my getJSON bug.
-I used [Stackoverflow](https://stackoverflow.com/questions/12249136/referenceerror-google-is-not-defined/12252771) for guidance on my google not defined bug.
-I used [Stackoverflow](https://stackoverflow.com/questions/1544739/google-maps-api-v3-how-to-remove-all-markers) to help solve the issue that my markers/ marker clusters weren't clearing.
-I used [Stackoverflow](https://stackoverflow.com/questions/12621274/close-infowindow-when-another-marker-is-clicked) to help solve my issue with multiple infoWindows being displayed.
-
-I have been watching the 'JavaScript: From Fundamentals to Functional JS' course on [Pluralsight](https://app.pluralsight.com/id/) by Bianca Gandolfo to supplement my learning from the Code Institute.
+1. I used [VisitManchester](https://www.visitmanchester.com/) for inspiration on design and locations to choose for my own site.
+2. I used [api.jquery](https://api.jquery.com/) for guidance on formatting of the functions implemented within my site (particularly for the $.each() function which allowed me to iterate through my JSON data to dynamically populate location details).
+3. I used [developers.google.com](https://developers.google.com/maps/documentation/javascript/examples/marker-remove) for guidance on removing markers from the map.
+4. I used [Stackoverflow](https://stackoverflow.com/questions/40600396/jquery-issue-typeerror-getjson-is-not-a-function) for guidance on my getJSON bug.
+5. I used [Stackoverflow](https://stackoverflow.com/questions/12249136/referenceerror-google-is-not-defined/12252771) for guidance on my google not defined bug.
+6. I used [Stackoverflow](https://stackoverflow.com/questions/1544739/google-maps-api-v3-how-to-remove-all-markers) to help solve the issue that my markers/ marker clusters weren't clearing.
+7. I used [Stackoverflow](https://stackoverflow.com/questions/12621274/close-infowindow-when-another-marker-is-clicked) to help solve my issue with multiple infoWindows being displayed.
+8. I have been watching the 'JavaScript: From Fundamentals to Functional JS' course on [Pluralsight](https://app.pluralsight.com/id/) by Bianca Gandolfo to supplement my learning from the Code Institute.
 
