@@ -7,6 +7,8 @@ This site has been designed to be easy to navigate and for users to find somethi
 
 ## Live site
 
+My live site can be found [here](https://lewisclark4.github.io/CI-MilestoneProjectTwo/).
+
 ## UXD
 ### User stories
 
@@ -99,8 +101,8 @@ Ease of navigation was a key strategy for the site, and therefore there are clea
 3. When creating my displayDetails function, i was receiving the error, “$.getJSON is not a function”. This was because I was using a jquery 'slim' CDN which does not contain the getJSON method. Therefore I changed this to receive a CDN that did contain this method.
 4. When creating my initMap function, I was receiving the error 'google is not defined'. I found a solution on stackoverflow, that suggested to remove the async defer script tags. When I did this, it resolved the error.
 5. I had an issue when I was looking at a location, then navigating back to look at another location, the map would keep adding markers to the map. I created (with guidance from the developers.google.com) the DeleteMarkers function to clear the map each time the DisplayDetails function was called.
-
-
+6. When creating my markers in the mainMap, the markers weren't clearing when I was selecting another button, so I added a markers array and pushed the markers into the array once created, and a loop function to clear that array, which I could then call to clear the markers. 
+7. When creating my marker infoWinows, I was able to have multiple windows open at once which meant that they were overlapping. I fixed this making a global infoWindo variable, meaning only 1 window could be open at any time.
 
 ## Deployment
 The site is deployed on GitHub. 
@@ -142,5 +144,8 @@ I used [api.jquery](https://api.jquery.com/) for guidance on formatting of the f
 I used [developers.google.com](https://developers.google.com/maps/documentation/javascript/examples/marker-remove) for guidance on removing markers from the map.
 I used [Stackoverflow](https://stackoverflow.com/questions/40600396/jquery-issue-typeerror-getjson-is-not-a-function) for guidance on my getJSON bug.
 I used [Stackoverflow](https://stackoverflow.com/questions/12249136/referenceerror-google-is-not-defined/12252771) for guidance on my google not defined bug.
+I used [Stackoverflow](https://stackoverflow.com/questions/1544739/google-maps-api-v3-how-to-remove-all-markers) to help solve the issue that my markers/ marker clusters weren't clearing.
+I used [Stackoverflow](https://stackoverflow.com/questions/12621274/close-infowindow-when-another-marker-is-clicked) to help solve my issue with multiple infoWindows being displayed.
+
 I have been watching the 'JavaScript: From Fundamentals to Functional JS' course on [Pluralsight](https://app.pluralsight.com/id/) by Bianca Gandolfo to supplement my learning from the Code Institute.
 
