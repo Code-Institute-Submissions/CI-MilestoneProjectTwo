@@ -2,17 +2,19 @@
 
 var markers = [];
 
-// Wait for site to load before initiating any js
-
+// Wait for site to load before initiating js
 $(document).ready(function () {
 
-// function to scroll to the main map section if the arrow is clicked
-    $("#arrow").click(function() {
-        $('html,body').animate({
-            scrollTop: $("#mainmap").offset().top},
-            '400ms');
-    });
 
+    // function to scroll to the main map section if the arrow is clicked
+    $(function scrollToMainMap() {
+        $("#arrow").click(function () {
+            $('html,body').animate({
+                scrollTop: $("#mainmap").offset().top
+            },
+                '400ms');
+        });
+    });
 
     // Used to display and hide feature sections when a nav item is selected.
 
@@ -47,7 +49,6 @@ $(document).ready(function () {
         });
     });
 
-
     // Used to display and hide feature sections when a one of the home 'buttons' is selected on the landing screen.
 
     $(function homeHideSections() {
@@ -66,9 +67,6 @@ $(document).ready(function () {
             }
         });
     });
-
-
-
 
     // Used add styling to location divs when hovered over
     $(function transformLocationImage() {
@@ -162,18 +160,21 @@ function initMap() {
 function mainMapMarkers() {
     $(".locationbutton").click(function () {
         //call the initMap function
-            initMap();
+        initMap();
         //remove any markers currently displayed on the map
-            deleteMarkers();
+        deleteMarkers();
         // define the type variable as the ID of the selected button (to allow us to identify applicable details in the JSON data)
-        if ($(this).attr("id") === "activitiesbutton"){
-            var type = "Activities"}
+        if ($(this).attr("id") === "activitiesbutton") {
+            var type = "Activities"
+        }
 
-        else if ($(this).attr("id") === "fooddrinkbutton"){
-            var type = "Food & Drink"}
+        else if ($(this).attr("id") === "fooddrinkbutton") {
+            var type = "Food & Drink"
+        }
 
-        else if ($(this).attr("id") === "accomodationbutton"){
-            var type = "Accomodation"}
+        else if ($(this).attr("id") === "accomodationbutton") {
+            var type = "Accomodation"
+        }
         // get the JSON file
         $.getJSON('assets/data/location_details.json', function (data) {
             //iterate through each object
@@ -189,6 +190,23 @@ function mainMapMarkers() {
                     });
                     // add marker details into the marker array (to be able to remove later)
                     markers.push(marker);
+
+                    //create infoWindow variable
+                    var infoWindow = new google.maps.InfoWindow({
+                    });
+
+                    //Create infoWindowContent variable to allow content to be populated in the info Window
+                    var infoWindowContent = "Test"
+
+                    //Create infoWindowContent variable to allow content to be populated in the info Window
+                    marker.addListener('mouseover', function () {
+                        infoWindow.setContent(infoWindowContent);
+                        infoWindow.open(map, marker);
+                    });
+
+                    marker.addListener('mouseout', function(){
+                      infoWindow.close();  
+                    });
                 }
             });
             //add the marker clusterer, and pass in the map, markers array and clusterer image
