@@ -1,6 +1,8 @@
 // create markers array (to later enable us to remove displayed markers)
-
 var markers = [];
+
+//Create infoWindow global variable (to ensure only 1 infoWindow can be open at any time)
+var infoWindow = new google.maps.InfoWindow();
 
 // Wait for site to load before initiating js
 $(document).ready(function () {
@@ -192,21 +194,20 @@ function mainMapMarkers() {
                     markers.push(marker);
 
                     //create infoWindow variable & multiple variables to create the infoWindoContent
-                    var infoWindow = new google.maps.InfoWindow({
-                    });
                     var infoWindowTitle = value.Name;
                     var infoWindowSubType = value.Subtype;
-                    var infoWindowDescription = value.Description
-                    var infoWindowWebsite = value.Website
+                    var infoWindowDescription = value.Description;
+                    var infoWindowWebsite = value.Website;
                    
                     //Create infoWindowContent variable and interpolate above variables
                     var infoWindowContent = `<h6><b>${infoWindowTitle}</b><h6><p>${infoWindowSubType}</p> <p>${infoWindowDescription}</p><a href=${infoWindowWebsite} target="_blank">Visit website</a>` ;
 
                     //Create infoWindowContent variable to allow content to be populated in the info Window
-                    marker.addListener('mouseover', function () {
-                        infoWindow.setContent(infoWindowContent);
-                        infoWindow.open(map, marker);
-                    });
+                        marker.addListener('mouseover', function () {
+                            infoWindow.setContent(infoWindowContent);
+                            infoWindow.open(map, marker);
+                        });
+                    
                 }
             });
             //add the marker clusterer, and pass in the map, markers array and clusterer image
