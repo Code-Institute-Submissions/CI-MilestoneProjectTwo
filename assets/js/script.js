@@ -165,15 +165,15 @@ function mainMapMarkers() {
         deleteMarkers();
         // define the type variable as the ID of the selected button (to allow us to identify applicable details in the JSON data)
         if ($(this).attr("id") === "activitiesbutton") {
-            var type = "Activities"
+            var type = "Activities";
         }
 
         else if ($(this).attr("id") === "fooddrinkbutton") {
-            var type = "Food & Drink"
+            var type = "Food & Drink";
         }
 
         else if ($(this).attr("id") === "accomodationbutton") {
-            var type = "Accomodation"
+            var type = "Accomodation";
         }
         // get the JSON file
         $.getJSON('assets/data/location_details.json', function (data) {
@@ -191,21 +191,21 @@ function mainMapMarkers() {
                     // add marker details into the marker array (to be able to remove later)
                     markers.push(marker);
 
-                    //create infoWindow variable
+                    //create infoWindow variable & multiple variables to create the infoWindoContent
                     var infoWindow = new google.maps.InfoWindow({
                     });
-
-                    //Create infoWindowContent variable to allow content to be populated in the info Window
-                    var infoWindowContent = "Test"
+                    var infoWindowTitle = value.Name;
+                    var infoWindowSubType = value.Subtype;
+                    var infoWindowDescription = value.Description
+                    var infoWindowWebsite = value.Website
+                   
+                    //Create infoWindowContent variable and interpolate above variables
+                    var infoWindowContent = `<h6><b>${infoWindowTitle}</b><h6><p>${infoWindowSubType}</p> <p>${infoWindowDescription}</p><a href=${infoWindowWebsite} target="_blank">Visit website</a>` ;
 
                     //Create infoWindowContent variable to allow content to be populated in the info Window
                     marker.addListener('mouseover', function () {
                         infoWindow.setContent(infoWindowContent);
                         infoWindow.open(map, marker);
-                    });
-
-                    marker.addListener('mouseout', function(){
-                      infoWindow.close();  
                     });
                 }
             });
@@ -271,5 +271,3 @@ function deleteMarkers(map) {
 // Call the functions
 displayDetails();
 mainMapMarkers();
-
-
