@@ -103,6 +103,7 @@ Ease of navigation was a key strategy for the site, and therefore there are clea
 5. I had an issue when I was looking at a location, then navigating back to look at another location, the map would keep adding markers to the map. I created (with guidance from the developers.google.com) the DeleteMarkers function to clear the map each time the DisplayDetails function was called.
 6. When creating my markers in the mainMap, the markers weren't clearing when I was selecting another button, so I added a markers array and pushed the markers into the array once created, and a loop function to clear that array, which I could then call to clear the markers. 
 7. When creating my marker infoWinows, I was able to have multiple windows open at once which meant that they were overlapping. I fixed this making a global infoWindo variable, meaning only 1 window could be open at any time.
+8. when creating my marker labels, I initially created my label/ labelIndex as global variables, which meant that the letters continued iterating when the using the mainMap, however when I moved them to be local variables, as the labelIndex was reset to 0 each time the function was run, the labels started from 'A' each time.
 
 ## Deployment
 The site is deployed on GitHub. 
@@ -146,5 +147,6 @@ All location images were sourced directly from the locations' own website.
 5. I used [Stackoverflow](https://stackoverflow.com/questions/12249136/referenceerror-google-is-not-defined/12252771) for guidance on my google not defined bug.
 6. I used [Stackoverflow](https://stackoverflow.com/questions/1544739/google-maps-api-v3-how-to-remove-all-markers) to help solve the issue that my markers/ marker clusters weren't clearing.
 7. I used [Stackoverflow](https://stackoverflow.com/questions/12621274/close-infowindow-when-another-marker-is-clicked) to help solve my issue with multiple infoWindows being displayed.
-8. I have been watching the 'JavaScript: From Fundamentals to Functional JS' course on [Pluralsight](https://app.pluralsight.com/id/) by Bianca Gandolfo to supplement my learning from the Code Institute.
+8. I used [developers.google.com](https://developers.google.com/maps/documentation/javascript/examples/marker-labels) for guidance on adding labels to the mainMap markers.
+9. I have been watching the 'JavaScript: From Fundamentals to Functional JS' course on [Pluralsight](https://app.pluralsight.com/id/) by Bianca Gandolfo to supplement my learning from the Code Institute.
 
