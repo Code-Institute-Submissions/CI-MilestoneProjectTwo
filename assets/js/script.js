@@ -165,6 +165,10 @@ function mainMapMarkers() {
         initMap();
         //remove any markers currently displayed on the map
         deleteMarkers();
+        //Create labels to allow each marker to be assigned a unique letter.
+        var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        //Set the index to 0, so each time the function is called, the first marker will be 'A'
+        var labelIndex = 0;
         // define the type variable as the ID of the selected button (to allow us to identify applicable details in the JSON data)
         if ($(this).attr("id") === "activitiesbutton") {
             var type = "Activities";
@@ -181,13 +185,15 @@ function mainMapMarkers() {
         $.getJSON('assets/data/location_details.json', function (data) {
             //iterate through each object
             $.each(data.location_details, function (i, value) {
+                
                 //Where the ID of the selected type matches the Type within the array
                 if (value.Type === type) {
                     //identify the lat,lng location
                     var markerLocation = new google.maps.LatLng(value.lat, value.lng);
-                    //add a marker to the map at the relevant locations
+                    //add a marker (with letter label) to the map at the relevant locations
                     var marker = new google.maps.Marker({
                         position: markerLocation,
+                        label: labels[labelIndex++ % labels.length],
                         map: map2,
                     });
                     // add marker details into the marker array (to be able to remove later)
