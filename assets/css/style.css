@@ -126,8 +126,10 @@ body {
 #footer {
     position: fixed;
     left: 0;
+    right: 0;
     bottom: 0;
-    width: 100%;
+    margin: 0 auto;
+    padding: 0 auto;
     height: 4em;
     background-color: rgba(230, 167, 35, 0.8);
     z-index: 1;
@@ -152,7 +154,7 @@ body {
 
 /* Main Map */
  #mainmap {
-     padding-top: 10vh;
+     padding-top: 5vh;
      padding-left: 0;
      padding-right: 0;
      height: 90vh;
@@ -161,8 +163,9 @@ body {
  
  .locationbutton{
 	background-color:#e6a723;
-    width: 110px;
-    margin: 0.2em;
+    width: 75%;
+    min-width: 125px;
+    margin: 0.5em;
     display: inline;
     font-size: 1em;
     font-weight: 700;
@@ -171,7 +174,7 @@ body {
 }
 
 #map2 {
-    height: 50vh;
+    height: 55vh;
     width: 90%;
 }
 
