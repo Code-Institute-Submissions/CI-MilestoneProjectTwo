@@ -91,6 +91,25 @@ Ease of navigation was a key strategy for the site, and therefore there are clea
 
 ## Features
 
+### Navigation Bar
+The navbar (collapsable on smaller devices) can be used to navigate to different areas of the site depending on user interaction.
+
+### Landing Page
+The landing page for the site is very mininal to prompt the user to interact with the site depending on their requirements. 
+The users are able to select from one of 3 clearly labelled buttons (which highlight upon hover)...**Activities, Food & Drink** and **Accomodation**.
+It is therefore simple for the user to select options based on what they are searching for.
+
+There is also a 'down' arrow which can be selected (or prompts the user to scroll down the page) which then displays the 'main map' section.
+This section has a short message explaining the another 3 buttons (with the same labels), can be selected to display where the locations are on the map.
+
+The Map has been designed to only show markers (also clustered where applicable) of the selected option (e.g. if a user selected accomodation the map will only display those locations). 
+Each marker on the map also has an InfoWindow which displays a short summary about that location
+
+### Footer
+A succint footer has been added for links to social media pages, although is hidden from smaller devices to prevent overcrowding of the page.
+
+
+
 ## Future Features to implement
 
 ## Testing
@@ -104,6 +123,7 @@ Ease of navigation was a key strategy for the site, and therefore there are clea
 6. When creating my markers in the mainMap, the markers weren't clearing when I was selecting another button, so I added a markers array and pushed the markers into the array once created, and a loop function to clear that array, which I could then call to clear the markers. 
 7. When creating my marker infoWinows, I was able to have multiple windows open at once which meant that they were overlapping. I fixed this making a global infoWindo variable, meaning only 1 window could be open at any time.
 8. when creating my marker labels, I initially created my label/ labelIndex as global variables, which meant that the letters continued iterating when the using the mainMap, however when I moved them to be local variables, as the labelIndex was reset to 0 each time the function was run, the labels started from 'A' each time.
+9. when adding the mainmap section to my landing page, a horizontal scroll bar was introduced upon the page loading. I therefore added CSS to define the body as 100% width and to hide any overflow.
 
 ## Deployment
 The site is deployed on GitHub. 
@@ -148,5 +168,6 @@ All location images were sourced directly from the locations' own website.
 6. I used [Stackoverflow](https://stackoverflow.com/questions/1544739/google-maps-api-v3-how-to-remove-all-markers) to help solve the issue that my markers/ marker clusters weren't clearing.
 7. I used [Stackoverflow](https://stackoverflow.com/questions/12621274/close-infowindow-when-another-marker-is-clicked) to help solve my issue with multiple infoWindows being displayed.
 8. I used [developers.google.com](https://developers.google.com/maps/documentation/javascript/examples/marker-labels) for guidance on adding labels to the mainMap markers.
-9. I have been watching the 'JavaScript: From Fundamentals to Functional JS' course on [Pluralsight](https://app.pluralsight.com/id/) by Bianca Gandolfo to supplement my learning from the Code Institute.
+9. My mentor, **Antonio Rodriguez**, for guidance on the content and design for my site, and also for guidance on my horizontal scroll bug.
+10. I have been watching the 'JavaScript: From Fundamentals to Functional JS' course on [Pluralsight](https://app.pluralsight.com/id/) by Bianca Gandolfo to supplement my learning from the Code Institute.
 
