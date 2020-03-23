@@ -93,6 +93,7 @@ Ease of navigation was a key strategy for the site, and therefore there are clea
 
 ### Navigation Bar
 The navbar (collapsable on smaller devices) can be used to navigate to different areas of the site depending on user interaction.
+The navbar is fixed so that it can be selected by the user at all times for improved UX/ site navigation.
 
 ### Landing Page
 The landing page for the site is very mininal to prompt the user to interact with the site depending on their requirements. 
@@ -108,9 +109,29 @@ Each marker on the map also has an InfoWindow which displays a short summary abo
 ### Footer
 A succint footer has been added for links to social media pages, although is hidden from smaller devices to prevent overcrowding of the page.
 
+### Activities, Food & Drink, Accomodation
+The site has been designed as a single page, but uses javascript to display sections of the site depending on user interactivity. 
+Each of these subsections can be displayed if the user selects on the relevant nav item, or the relevant 'button' on the home page.
+Once navigated to these sections, the user is presented with 12 different options that have been specially selected to have a range of offerings to cater for many tastes.
+When a user hovers over one of the locations, the image is transformed using javascript to apply css.
+The user is able to click on each location to display further details of their selection.
+
+### Location details
+This section is dynamically populated depending on the user's selection.
+There is javascript functions which iterates through a JSON file to populate details of the selected location (Name, type & subtype, a link to the website of the location, a phone number and a short summary about that location).
+There is also a large map which has a marker displaying the location of the selected option only (compared to the main map which displays markers for a specific feature type).
+
+### Responsiveness
+I wanted my site to be fully responsive across all devices, so I used **Bootstrap** as my framework to achieve this. 
+I was able to use Responsinator and use Chrome Development Tools throughout the design of the site to ensure that everything was displayed neatly and clearly across various resolutions.
+Images use 'cover' and 'contain' properties to preserve their aspect ratio.
 
 
 ## Future Features to implement
+1. I'd like for the location images to be displayed using javascript (rather than defined within the HTML), this would allow for the content to be updated much easier in the future (rather than having to update the HTML for image locations etc.).
+2. I'd like to display more information about each location (e.g. reviews, prices, opening times)
+3. Possibly more places of interest and addition subsets of these sections (e.g. a whole section for 'sport activities' or different types of cuisine within the Food & Drink category).
+
 
 ## Testing
 
@@ -140,9 +161,11 @@ The site is deployed on GitHub.
 10. Scroll Down to the github pages section and click on the dropdown option under source, and select master branch.
 11. This now publishes the site, and provides the URL to that published site.
 
-The site can also be ran locally by creating a clone of this repository. In the git hub repository, click on the clone or download button and copy the URL.
-
-Within a new git terminal, you can clone the project with the command git clone "Copied URL"
+The site can also be ran locally by creating a clone of this repository. 
+1. In the git hub repository, click on the clone or download button
+2. Copy the URL.
+3. Open your own local IDE terminal
+4. You can clone the project with the command git clone "Copied URL"
 
 ## Credits
 ### Content
@@ -169,5 +192,6 @@ All location images were sourced directly from the locations' own website.
 7. I used [Stackoverflow](https://stackoverflow.com/questions/12621274/close-infowindow-when-another-marker-is-clicked) to help solve my issue with multiple infoWindows being displayed.
 8. I used [developers.google.com](https://developers.google.com/maps/documentation/javascript/examples/marker-labels) for guidance on adding labels to the mainMap markers.
 9. My mentor, **Antonio Rodriguez**, for guidance on the content and design for my site, and also for guidance on my horizontal scroll bug.
-10. I have been watching the 'JavaScript: From Fundamentals to Functional JS' course on [Pluralsight](https://app.pluralsight.com/id/) by Bianca Gandolfo to supplement my learning from the Code Institute.
+10. **Andreas Jost** for his feedback on the slack Peer-code-review channel, regarding 'white space' & use of the site logo as a link to the home page.
+11. I have been watching the 'JavaScript: From Fundamentals to Functional JS' course on [Pluralsight](https://app.pluralsight.com/id/) by Bianca Gandolfo to supplement my learning from the Code Institute.
 
