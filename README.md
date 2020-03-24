@@ -1,11 +1,24 @@
 # CI-MilestoneProjectTwo
+## Table of Contents
+1. [Overview](#go-mcr-overview)
+    
+    - [Live Site](#live-site)
+2. [User Experience & Design](#uxd)
+    
+    - [Wireframes](#skeleton)
+3. [Technologies and Tools](#technologies-and-tools)
+4. [Features](#features)
+5. [Testing](#testing)
+6. [Deployment](#deployment)
+7. [Credits](#credits)
+
 
 ## GO MCR Overview
 This site has been created to be a guide for potential visitors to Manchester, or local residents, to find a selection of activities to do, places to eat, or accomodation within the city.
 
 This site has been designed to be easy to navigate and for users to find something that takes their fancy.
 
-## Live site
+### Live site
 
 My live site can be found [here](https://lewisclark4.github.io/CI-MilestoneProjectTwo/).
 
@@ -64,7 +77,7 @@ Depending on which option is selected, the site will display a variety of locati
 
 ### Surface
 
-The idea was to create a site which shows off the fun bubbly side of manchester, adopting the colours of the Manchester Worker Bee.
+The idea was to create a site which shows off the fun bubbly side of manchester, adopting the colours of the Manchester Worker Bee (which is also the site logo).
 
 The font of 'Indie Flower' was chosen as I felt that while retaining legibility, it also offers a fun and unique design to the site.
 It is described by the designer as "carefree and open" "with the bubbly, rounded edges".
@@ -73,7 +86,7 @@ The deep yellow/ orange colour offers a comfortable contrast against 'black' and
 
 Ease of navigation was a key strategy for the site, and therefore there are clear and obvious effects when a user is able to interact with the site (e.g. the cursor is replace by a pointer, and the particular element will be visually interactive)
 
-## Technologies & Tools
+## Technologies and Tools
 1. HTML
 2. CSS
 3. Bootstrap 4
@@ -94,6 +107,7 @@ Ease of navigation was a key strategy for the site, and therefore there are clea
 ### Navigation Bar
 The navbar (collapsable on smaller devices) can be used to navigate to different areas of the site depending on user interaction.
 The navbar is fixed so that it can be selected by the user at all times for improved UX/ site navigation.
+The website logo also acts as a link back to the home page.
 
 ### Landing Page
 The landing page for the site is very mininal to prompt the user to interact with the site depending on their requirements. 
@@ -134,6 +148,27 @@ Images use 'cover' and 'contain' properties to preserve their aspect ratio.
 
 
 ## Testing
+###General
+I have run my HTML and CSS code through the W3C validation websites. and I have run my js code through JSHint.
+
+[W3C Markup Validation Service](https://validator.w3.org/)
+
+[W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/)
+
+[JSHint](https://jshint.com/)
+
+I frequently used these tools to check my code quality and ensure everything was in order. This highlighted small errors as I was building my site (e.g. erroneous or missing closing tags or missing parenthesis when building a JS function)
+
+I frequently used [Responsinator](http://www.responsinator.com/) and Google DevTools, to allow me to test the responsiveness of my site across different devices & resolutions throughout development.
+
+I also tested across different browsers (Chrome, Safari, IE, Mi browser) which led to me identifying that ES6 is not supported in IE.
+
+### Nav Bar
+1. Test that the Nav Links can all be clicked, and take me to the relevant location on the site.
+2. Test that the Nav Bar toggles on smaller devices (using Chrome DevTools to check different devices), and can be clicked to drop down and links can still be selected to navigate.
+3. Test that the orange border is displayed when hovered over. 
+4. Test that the navbar remains fixed to the top of the page.
+
 
 ### Bugs Encoutered & Fixed
 1. Minor issue causing some sections to stack, so I added a container around the landing page and applied 100vh/ 100vw to prevent the stacking.
@@ -145,6 +180,7 @@ Images use 'cover' and 'contain' properties to preserve their aspect ratio.
 7. When creating my marker infoWinows, I was able to have multiple windows open at once which meant that they were overlapping. I fixed this making a global infoWindo variable, meaning only 1 window could be open at any time.
 8. when creating my marker labels, I initially created my label/ labelIndex as global variables, which meant that the letters continued iterating when the using the mainMap, however when I moved them to be local variables, as the labelIndex was reset to 0 each time the function was run, the labels started from 'A' each time.
 9. when adding the mainmap section to my landing page, a horizontal scroll bar was introduced upon the page loading. I therefore added CSS to define the body as 100% width and to hide any overflow.
+10. when adding the nav-link border on hover, it was causing the a mis-alignment of the nav links. to solve this I added a static border of 2px, but transparent, so it is not visible until hovered.  
 
 ## Deployment
 The site is deployed on GitHub. 
