@@ -53,6 +53,7 @@ body {
 .logo {
     max-height: 70px ;
     background-size: contain;
+    cursor: pointer;
 }
 /* Home */
 

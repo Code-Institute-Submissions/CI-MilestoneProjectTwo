@@ -18,6 +18,13 @@ $(document).ready(function () {
         });
     });
 
+    // Used to return to the 'home' page when the logo is selected
+    $(function logoToHome() {
+        $(".logo").click(function () {
+              $("#home, #mainmap").removeClass("hide");
+              $("#activities, #fooddrink ,#accomodation, #locationdetails").addClass("hide");
+        });
+    });
     // Used to display and hide feature sections when a nav item is selected.
 
     $(function navHideSections() {
