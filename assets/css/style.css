@@ -23,11 +23,11 @@ body {
 /* Nav Bar */
 
 #navcontainer {
-    align-content: center;
-    width: 100vw;
     position: fixed;
     top:0;
     left:0;
+    align-content: center;
+    width: 100vw;
     border-bottom: 1px solid #e6a723;
     z-index: 2;
 }
@@ -42,6 +42,7 @@ body {
 .navbar-light .navbar-nav .nav-link{
     color: #000;
     border: 2px solid transparent;
+    padding: 6px;
 }
 
 .navbar-light .navbar-nav .nav-link:hover{
@@ -92,15 +93,11 @@ body {
 .allfeatures{
     padding-top: 10vh;
     font-size: 2em;
-    text-align: center;
-    align-items: center;
 }
 
 .feature{
     border: 2px solid #e6a723;
     margin: 0.5em 1em 0em 1em;
-    justify-content: center;
-    align-items: center;
 	background-color: rgba(0, 0, 0, 0.6);
     cursor: pointer;
 }
@@ -119,7 +116,6 @@ body {
     border-color: #e6a723;
     border-width: 0px 4px 4px 0px;
     transform: rotate(45deg);
-    transition: border-width 150ms ease-in-out;
     cursor: pointer;
 }
 
@@ -131,8 +127,6 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    margin: 0 auto;
-    padding: 0 auto;
     height: 4em;
     background-color: rgba(230, 167, 35, 0.8);
     z-index: 1;
@@ -158,22 +152,19 @@ body {
 /* Main Map */
  #mainmap {
      padding-top: 5vh;
-     padding-left: 0;
-     padding-right: 0;
      height: 90vh;
      width: 100vw;
  }
  
  .locationbutton{
-	background-color:#e6a723;
     width: 75%;
     min-width: 125px;
     margin: 0.5em;
     display: inline;
     font-size: 1em;
     font-weight: 700;
+    background-color:#e6a723;
 	cursor:pointer;
-	text-decoration:none;
 }
 
 #map2 {
@@ -194,14 +185,16 @@ body {
     margin-bottom: 20px;
 }
 
+.featuresummary {
+    font-size: 1.5em;
+}
+
 .location {
     display: flex;
     justify-content: center;
     margin: 50px;
-    padding: 0;
     cursor: pointer;
 }
-
 
 .locationimage {
     height: 275px;
@@ -213,10 +206,10 @@ body {
 .locationname{
     position: absolute;
     top:0;
-    color: #fff;
+    width: 300px;
     font-size: 1.25em;
     font-weight: 600;
-    width: 300px;
+    color: #fff;
     background-color: rgba(230, 167, 35, 0.8);
 }
 
@@ -255,7 +248,7 @@ body {
 }
 
 #locationdetails p{
-    font-size: 1.25em;
+    font-size: 1.4em;
 }
 
 #map {
