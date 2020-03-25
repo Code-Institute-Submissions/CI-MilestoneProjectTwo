@@ -205,7 +205,9 @@ The site can also be ran locally by creating a clone of this repository.
 
 ## Credits
 ### Content
-All code has been written by myself. There have been instances where I have used online sources for guidance on particular issues, but the code has been adapted by myself for the purpose of my site (see Acknowledgements).
+All code has been written by myself (except code for outdated browser script, see below). There have been instances where I have used online sources for guidance on particular issues, but the code has been adapted by myself for the purpose of my site (see Acknowledgements).
+
+The script code added to my HTML to display an alert if the user has an out of date browser that may not work with my site was sourced from [browser-update.org](https://browser-update.org/#install).
 
 All of the location description text has been sourced directly from the locations' own website.
 
