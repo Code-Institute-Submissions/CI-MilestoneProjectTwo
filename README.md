@@ -161,7 +161,7 @@ I frequently used these tools to check my code quality and ensure everything was
 
 I frequently used [Responsinator](http://www.responsinator.com/) and Google DevTools, to allow me to test the responsiveness of my site across different devices & resolutions throughout development.
 
-I also tested across different browsers (Chrome, Safari, IE, Mi browser) which led to me identifying that ES6 is not supported in IE.
+I also tested across different browsers (Chrome, Safari, IE, Mi browser) which led to me identifying that ES6 is not supported in IE. This prompted me to add the script to display a message to a user that the site experience may not be the same and to update their browser.
 
 ### Nav Bar
 1. Test that the Nav Links can all be clicked, and take me to the relevant location on the site.
