@@ -69,11 +69,11 @@ Depending on which option is selected, the site will display a variety of locati
 
 ### Skeleton
 
-[Mobile wireframe](https://github.com/lewisclark4/CI-MilestoneProjectTwo/blob/master/wireframes/Mobile%20Wireframes.pdf)
+[Mobile wireframe](https://github.com/lewisclark4/CI-MilestoneProjectTwo/blob/master/wireframes/mobile-wireframes.pdf)
 
-[Tablet wireframe](https://github.com/lewisclark4/CI-MilestoneProjectTwo/blob/master/wireframes/Tablet%20Wireframe.pdf)
+[Tablet wireframe](https://github.com/lewisclark4/CI-MilestoneProjectTwo/blob/master/wireframes/tablet-wireframe.pdf)
 
-[Desktop wireframe](https://github.com/lewisclark4/CI-MilestoneProjectTwo/blob/master/wireframes/Desktop%20Wireframes.pdf)
+[Desktop wireframe](https://github.com/lewisclark4/CI-MilestoneProjectTwo/blob/master/wireframes/desktop-wireframes.pdf)
 
 ### Surface
 
