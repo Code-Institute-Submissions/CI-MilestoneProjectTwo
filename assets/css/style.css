@@ -107,7 +107,6 @@ body {
     transition: .25s ease-in-out;
 }
 
-
 #arrow{
     margin-top: 2em;
     height: 25px;
@@ -118,8 +117,6 @@ body {
     transform: rotate(45deg);
     cursor: pointer;
 }
-
-
 
 /* footer */
 #footer {
@@ -213,7 +210,6 @@ body {
     background-color: rgba(230, 167, 35, 0.8);
 }
 
-
 /* Activities, Food & Drink, Accomodation details */
 #locationdetails{
     padding-top: 100px;
@@ -255,5 +251,3 @@ body {
     height: 75vh;
     width: 65vw;
 }
-
-

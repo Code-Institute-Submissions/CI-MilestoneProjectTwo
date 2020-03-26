@@ -7,7 +7,6 @@ var infoWindow = new google.maps.InfoWindow();
 // Wait for site to load before initiating js
 $(document).ready(function () {
 
-
     // function to scroll to the main map section if the arrow is clicked
     $(function scrollToMainMap() {
         $("#arrow").click(function () {
@@ -25,8 +24,8 @@ $(document).ready(function () {
               $("#activities, #fooddrink ,#accomodation, #locationdetails").addClass("hide");
         });
     });
+    
     // Used to display and hide feature sections when a nav item is selected.
-
     $(function navHideSections() {
         //when a nav-link is selected
         $(".nav-link").click(function () {
@@ -61,17 +60,25 @@ $(document).ready(function () {
     // Used to display and hide feature sections when a one of the home 'buttons' is selected on the landing screen.
 
     $(function homeHideSections() {
+        // when a div with the feature class is selected
         $(".feature").click(function () {
+            // if the ID of that div = homeactivities
             if ($(this).attr("id") === "homeactivities") {
+                //display the activities section
                 $("#activities").removeClass("hide");
+                //hide all other sections
                 $("#home, #mainmap, #fooddrink, #accomodation, #locationdetails").addClass("hide");
-
+            // if the ID of that div = homefooddrink
             } else if ($(this).attr("id") === "homefooddrink") {
+                //display the fooddrink section
                 $("#fooddrink").removeClass("hide");
+                //hide all other sections
                 $("#home, #mainmap, #activities, #accomodation, #locationdetails").addClass("hide");
-
+            // if the ID of that div = homefooddrink
             } else if ($(this).attr("id") === "homeaccomodation") {
+                //display the Accomodation section
                 $("#accomodation").removeClass("hide");
+                //hide all other sections
                 $("#home, #mainmap, #activities, #fooddrink, #locationdetails").addClass("hide");
             }
         });
@@ -108,7 +115,6 @@ $(document).ready(function () {
 });
 
 // Function to load & style map
-
 function initMap() {
     //default the map center, zoom and styling
     var mapDefault = {
@@ -180,11 +186,9 @@ function mainMapMarkers() {
         if ($(this).attr("id") === "activitiesbutton") {
             var type = "Activities";
         }
-
         else if ($(this).attr("id") === "fooddrinkbutton") {
             var type = "Food & Drink";
         }
-
         else if ($(this).attr("id") === "accomodationbutton") {
             var type = "Accomodation";
         }
@@ -230,11 +234,9 @@ function mainMapMarkers() {
 }
 
 // Function to display details and map marker of the selected location 
-
 function displayDetails() {
     //call the initMap function
     initMap();
-
     $(".location").click(function () {
         // define the thisLocation variable as the ID of the selected location (to allow us to identify applicable details in the JSON data)
         var thisLocation = this.id;
@@ -257,6 +259,7 @@ function displayDetails() {
                     });
                     // center the map over the markerlocation
                     map.panTo(center);
+                    // Zoom into map
                     map.setZoom(15);
                     // add marker details into the marker array (to be able to remove later)
                     markers.push(marker);
@@ -271,7 +274,6 @@ function displayDetails() {
         });
     });
 }
-
 
 // function to iterate through the markers array, and set a clear map again
 function deleteMarkers(map) {
