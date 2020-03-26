@@ -86,6 +86,8 @@ The deep yellow/ orange colour offers a comfortable contrast against 'black' and
 
 Ease of navigation was a key strategy for the site, and therefore there are clear and obvious effects when a user is able to interact with the site (e.g. the cursor is replace by a pointer, and the particular element will be visually interactive)
 
+I added the logo (the Manchester Worker Bee) as a favIcon for the site to help users identify the page if they have multiple tabs open.
+
 ## Technologies and Tools
 1. HTML
 2. CSS
@@ -191,6 +193,7 @@ I heavily relied on use of the console.log() function when developing my js func
 6. Test that an infoWindow is displayed when a marker is hovered over.
 7. Test that interpolation of data into infowindow content is displayed correctly
 8. Test that only one infowindow can be open at one time (open infowindows should close when another marker is hovered over). 
+9. Test that the map has a suitable centering and zoom to be able to see all markers.
 
 ### Activities, Food & Drink, Accomodation sections
 1. Test responsiveness across devices to ensure the locations/ images are displayed neatly as per the bootstrap grid.
@@ -205,6 +208,7 @@ I heavily relied on use of the console.log() function when developing my js func
 3. Test that the marker for the location is correctly added to the map.
 4. Test that if a user selects another location, that the original marker is cleared and the marker for the new selection is displayed.
 5. Test that the href to the location's website works correctly, and opens in a new browser tab.
+9. Test that the map has a suitable centering and zoom to be able to identify where the location is.
 
 ### Bugs Encoutered & Fixed
 1. Minor issue causing some sections to stack, so I added a container around the landing page and applied 100vh/ 100vw to prevent the stacking.
