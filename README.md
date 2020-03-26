@@ -79,7 +79,7 @@ Depending on which option is selected, the site will display a variety of locati
 
 The idea was to create a site which shows off the fun bubbly side of manchester, adopting the colours of the Manchester Worker Bee (which is also the site logo).
 
-The font of 'Indie Flower' was chosen as I felt that while retaining legibility, it also offers a fun and unique design to the site.
+The font of 'Indie Flower' was chosen as I felt that while retaining legibility, it also offers a fun and unique design to the site, that fits with the unique character and atmposphere that can be found in Manchester.
 It is described by the designer as "carefree and open" "with the bubbly, rounded edges".
 
 The deep yellow/ orange colour offers a comfortable contrast against 'black' and 'white' backgrounds without causing any strain to read.
@@ -163,12 +163,48 @@ I frequently used [Responsinator](http://www.responsinator.com/) and Google DevT
 
 I also tested across different browsers (Chrome, Safari, IE, Mi browser) which led to me identifying that ES6 is not supported in IE. This prompted me to add the script to display a message to a user that the site experience may not be the same and to update their browser.
 
+I heavily relied on use of the console.log() function when developing my js functions, particularly when reading data from the JSON & adding map markers (to assist me with understanding exactly what data had been unpacked at each point).
 ### Nav Bar
 1. Test that the Nav Links can all be clicked, and take me to the relevant location on the site.
 2. Test that the Nav Bar toggles on smaller devices (using Chrome DevTools to check different devices), and can be clicked to drop down and links can still be selected to navigate.
-3. Test that the orange border is displayed when hovered over. 
-4. Test that the navbar remains fixed to the top of the page.
+3. Test that the orange border is displayed when nav links are hovered over. 
+4. Test that the navbar remains fixed to the top of the page 
 
+### Home Page div/buttons
+1. Test that the buttons are highlighted on hover.
+2. Test that the buttons can be clicked an they navigate me to the relevant section of the site.
+3. Test responsiveness across devices to ensure the buttons are displayed neatly as per the bootstrap grid.
+4. Test that the arrow button accurately navigates to the mainMap section.
+5. Test that the landing page heading and tagline are not displayed on smaller devices.
+
+###Footer
+1. Test that the footer is fixed to the bottom of the page.
+2. Test that the social icons change colour on hover.
+3. Test that the footer is hidden on smaller devices.
+
+### Main Map
+1. Test that the map successfully initiates.
+2. Test that each of the location buttons adds markers (and clusters) to the map.
+3. Test that when a location button is selected, any markers/ clusters currently on the map are removed.
+4. Test that the map is resonsive across devices.
+5. Test that markers are given a label when loaded & and these reset from 'A' each time a location button is selected.
+6. Test that an infoWindow is displayed when a marker is hovered over.
+7. Test that interpolation of data into infowindow content is displayed correctly
+8. Test that only one infowindow can be open at one time (open infowindows should close when another marker is hovered over). 
+
+### Activities, Food & Drink, Accomodation sections
+1. Test responsiveness across devices to ensure the locations/ images are displayed neatly as per the bootstrap grid.
+2. Test that all nav items still function/ navigate accordingly.
+3. Test the feature heading and summary are visible on all devices.
+4. Test that the location images are scaled on hover (and the location names scale too)
+5. Test that the I am able to navigate to location details if I click on a location image.
+
+### Location details
+1. Test responsiveness across devices to ensure the location details, and map were both clearly displayed as per the bootstrap grid.
+2. Test each location to ensure that the relevant information is correctly displayed based on the selection.
+3. Test that the marker for the location is correctly added to the map.
+4. Test that if a user selects another location, that the original marker is cleared and the marker for the new selection is displayed.
+5. Test that the href to the location's website works correctly, and opens in a new browser tab.
 
 ### Bugs Encoutered & Fixed
 1. Minor issue causing some sections to stack, so I added a container around the landing page and applied 100vh/ 100vw to prevent the stacking.
@@ -207,7 +243,7 @@ The site can also be ran locally by creating a clone of this repository.
 ### Content
 All code has been written by myself (except code for outdated browser script, see below). There have been instances where I have used online sources for guidance on particular issues, but the code has been adapted by myself for the purpose of my site (see Acknowledgements).
 
-The script code added to my HTML to display an alert if the user has an out of date browser that may not work with my site was sourced from [browser-update.org](https://browser-update.org/#install).
+The script code added to my HTML to display an alert if the user has an out of date browser, that may not work with my site, was sourced from [browser-update.org](https://browser-update.org/#install).
 
 All of the location description text has been sourced directly from the locations' own website.
 
@@ -229,7 +265,9 @@ All location images were sourced directly from the locations' own website.
 6. I used [Stackoverflow](https://stackoverflow.com/questions/1544739/google-maps-api-v3-how-to-remove-all-markers) to help solve the issue that my markers/ marker clusters weren't clearing.
 7. I used [Stackoverflow](https://stackoverflow.com/questions/12621274/close-infowindow-when-another-marker-is-clicked) to help solve my issue with multiple infoWindows being displayed.
 8. I used [developers.google.com](https://developers.google.com/maps/documentation/javascript/examples/marker-labels) for guidance on adding labels to the mainMap markers.
-9. My mentor, **Antonio Rodriguez**, for guidance on the content and design for my site, and also for guidance on my horizontal scroll bug.
-10. **Andreas Jost** for his feedback on the slack Peer-code-review channel, regarding 'white space' & use of the site logo as a link to the home page.
-11. I have been watching the 'JavaScript: From Fundamentals to Functional JS' course on [Pluralsight](https://app.pluralsight.com/id/) by Bianca Gandolfo to supplement my learning from the Code Institute.
+9. I used [codepen](https://codepen.io/pjwiebe/pen/VmmxpM) for guidance on creating my down arrow with CSS.
+10. I used [w3schools](https://www.w3schools.com/howto/howto_css_smooth_scroll.asp) for guidance on using javascript to scroll to an element (my scrollToMap function).
+11. My mentor, **Antonio Rodriguez**, for guidance on the content and design for my site, and also for guidance on my horizontal scroll bug.
+12. **Andreas Jost** for his feedback on the slack Peer-code-review channel, regarding 'white space' & use of the site logo as a link to the home page.
+13. I have been watching the 'JavaScript: From Fundamentals to Functional JS' course on [Pluralsight](https://app.pluralsight.com/id/) by Bianca Gandolfo to supplement my learning from the Code Institute.
 
