@@ -150,7 +150,7 @@ Images use 'cover' and 'contain' properties to preserve their aspect ratio.
 
 
 ## Testing
-###General
+### General
 I have run my HTML and CSS code through the W3C validation websites. and I have run my js code through JSHint.
 
 [W3C Markup Validation Service](https://validator.w3.org/)
@@ -166,6 +166,7 @@ I frequently used [Responsinator](http://www.responsinator.com/) and Google DevT
 I also tested across different browsers (Chrome, Safari, IE, Mi browser) which led to me identifying that ES6 is not supported in IE. This prompted me to add the script to display a message to a user that the site experience may not be the same and to update their browser.
 
 I heavily relied on use of the console.log() function when developing my js functions, particularly when reading data from the JSON & adding map markers (to assist me with understanding exactly what data had been unpacked at each point).
+
 ### Nav Bar
 1. Test that the Nav Links can all be clicked, and take me to the relevant location on the site.
 2. Test that the Nav Bar toggles on smaller devices (using Chrome DevTools to check different devices), and can be clicked to drop down and links can still be selected to navigate.
@@ -179,7 +180,7 @@ I heavily relied on use of the console.log() function when developing my js func
 4. Test that the arrow button accurately navigates to the mainMap section.
 5. Test that the landing page heading and tagline are not displayed on smaller devices.
 
-###Footer
+### Footer
 1. Test that the footer is fixed to the bottom of the page.
 2. Test that the social icons change colour on hover.
 3. Test that the footer is hidden on smaller devices.
@@ -247,7 +248,7 @@ The site can also be ran locally by creating a clone of this repository.
 ### Content
 All code has been written by myself (except code for outdated browser script, see below). There have been instances where I have used online sources for guidance on particular issues, but the code has been adapted by myself for the purpose of my site (see Acknowledgements).
 
-The script code added to my HTML to display an alert if the user has an out of date browser, that may not work with my site, was sourced from [browser-update.org](https://browser-update.org/#install).
+The script code added to browser_validate.js to display an alert if the user has an out of date browser, was sourced from [browser-update.org](https://browser-update.org/#install).
 
 All of the location description text has been sourced directly from the locations' own website.
 
@@ -255,6 +256,7 @@ All of the location description text has been sourced directly from the location
 Home images were sourced from the following stock images library, and were all free for use, sharing or modification, even commercially.
 
 [Flickr](https://www.flickr.com/)
+
 [Pixabay](https://pixabay.com/)
 
 All location images were sourced directly from the locations' own website.
